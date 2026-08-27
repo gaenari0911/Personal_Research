@@ -46,8 +46,10 @@ Final tables and dependency-free SVG/HTML plots are under
 - `docs/`: protocol and implementation documentation
 - `analysis/stage_b/final_test/`: held-out Test95 reports and visualizations
 
-Large checkpoints, cached representations, logs, external repositories, source
-videos, and local operational prompts are intentionally excluded from Git.
+The Stage A `best_val.pt` and `last.pt` checkpoints for B0--B3 are versioned
+through Git LFS. Run `git lfs install` before cloning or pulling them. Other
+checkpoints, representation caches, logs, external repositories, source videos,
+and local operational prompts are intentionally excluded from Git.
 
 ## Validation
 

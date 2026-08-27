@@ -12,11 +12,19 @@ external/
 venv/
 
 # Large generated model/runtime artifacts
-checkpoints/
 logs/
 downloads/
 analysis/stage_b/representations/
-*.pt
+checkpoints/stage_b/
+checkpoints/**/*.pt
+!checkpoints/stage_a/B0/best_val.pt
+!checkpoints/stage_a/B0/last.pt
+!checkpoints/stage_a/B1/best_val.pt
+!checkpoints/stage_a/B1/last.pt
+!checkpoints/stage_a/B2/best_val.pt
+!checkpoints/stage_a/B2/last.pt
+!checkpoints/stage_a/B3/best_val.pt
+!checkpoints/stage_a/B3/last.pt
 *.pth
 *.ckpt
 *.safetensors
