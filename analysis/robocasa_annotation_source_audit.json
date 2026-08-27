@@ -1,0 +1,71 @@
+{
+  "task": "WashFruitColander",
+  "audit_date": "2026-08-24",
+  "result": "CONDITIONAL",
+  "repository": {
+    "remote": "https://github.com/robocasa/robocasa.git",
+    "branch": "main",
+    "local_commit_before_fetch": "a07e365c958c4216cd6bbd5f30b47f09a65c6f00",
+    "upstream_commit_after_fetch": "a07e365c958c4216cd6bbd5f30b47f09a65c6f00",
+    "local_worktree": "clean",
+    "up_to_date": true,
+    "annotation_announcement_commit": "f1e7fbee9879359ea5f3aa9c7c20a7bbcc706728",
+    "annotation_announcement_commit_date": "2026-07-07T18:19:58-07:00",
+    "announcement_scope": "target composite datasets"
+  },
+  "official_metadata": {
+    "task": "WashFruitColander",
+    "split": "target",
+    "source": "human",
+    "registry_path": "v1.0/target/composite/WashFruitColander/20250811/lerobot",
+    "version_date": "20250811",
+    "horizon": 3150,
+    "archive_name": "lerobot.tar",
+    "archive_key": "target/composite/WashFruitColander/20250811/lerobot.tar",
+    "official_share_url": "https://utexas.box.com/s/8omrgv8mqo2p5s1hqjmas67p30etsiic",
+    "official_direct_url": "https://utexas.box.com/shared/static/8omrgv8mqo2p5s1hqjmas67p30etsiic.tar",
+    "expected_size_bytes": null,
+    "expected_size_note": "The official registry and documentation publish no byte size or checksum."
+  },
+  "endpoint_audit": {
+    "checked_at": "2026-08-24T19:50:27+09:00",
+    "share_url_http_status": 404,
+    "direct_url_http_status": 404,
+    "redirect_to_replacement": false,
+    "download_script_uses_other_registry": false,
+    "download_script_behavior": "Reads box_links_ds.json and converts /s/<id> to /shared/static/<id>.tar.",
+    "registry_link_last_changed_commit": "9ea91e9121c1eb74fa59015de570d7dcc91c417b",
+    "registry_link_last_changed_date": "2026-02-24T10:31:06-08:00",
+    "annotation_announcement_updated_registry": false,
+    "peer_target_composite_share_status": {
+      "WaffleReheat": 404,
+      "WashLettuce": 404,
+      "StoreLeftoversInBowl": 404
+    },
+    "maintainer_side_evidence": "The latest official main and official docs announce the update but retain pre-announcement Box IDs; four target-composite Box shares are simultaneously unavailable."
+  },
+  "official_huggingface_audit": {
+    "organization": "https://huggingface.co/robocasa",
+    "public_datasets": [
+      "robocasa/robocasa-assets"
+    ],
+    "washfruitcolander_dataset_present": false,
+    "annotation_delta_present": false
+  },
+  "source_policy": {
+    "nvidia_mirror_used_for_latest_annotations": false,
+    "personal_or_unofficial_mirror_used": false,
+    "unofficial_search_results_excluded": true
+  },
+  "minimal_download_audit": {
+    "annotation_only_endpoint": null,
+    "single_parquet_endpoint": null,
+    "metadata_only_endpoint": null,
+    "full_archive_endpoint": "HTTP 404",
+    "range_request_test": "NOT_APPLICABLE_TO_404_RESPONSE",
+    "download_attempted": false,
+    "staging_created": false,
+    "staging_path": "/ssd1/itaein/datasets/RoboCasa365/WashFruitColander_latest_staging"
+  },
+  "conclusion": "The latest official annotation-bearing release is announced and its exact official registry endpoint is identified, but official bytes are unavailable because the maintainer-controlled Box distribution is broken."
+}

@@ -1,0 +1,43 @@
+{
+  "schema_version": "r4-v1",
+  "timestamp": "2026-08-25T14:01:11+09:00",
+  "status": "PASS",
+  "research_sha256": "90e33aacb33dc669c41f67a915938f4f3e3b21b2dba68716bbaa34537a9e49bd",
+  "source_checks": {
+    "required_files_present": true,
+    "episode_index_sha256": "f3f98f329abb3582a66ef717822cff6db619fa7d236178e30e18b62af1d582f5",
+    "r3_encoder_sha256": "3f2a6bc80d6355eadf70a9aa7c824359e14918017a0c7590aff43ec098021f1f",
+    "r3_mamba_sha256": "36fb51ffb9125ff55bed0443f20b288de634077beb95d828efb8dd9a5a92e603",
+    "r3_model_sha256": "5e03fc1a8317765940c4f84dd900ad86d02ec222f0ba293c158d8664cab21473",
+    "r3_loss_sha256": "66aa44d19c5cd0ef129a4814bc3b90b21a35e32e324a6f129c3a6606b9b03939",
+    "r3_tests_sha256": "91334c6b4d059ba186c6852cef42bf5a9080c446d816938a47d77a6e985033f0"
+  },
+  "dataset": {
+    "episode_index_count": 914,
+    "hdf_sources_present": 914,
+    "hdf_sources_missing": 0,
+    "videos_currently_materialized": 5,
+    "pilot_videos_to_materialize_on_demand_only": true,
+    "dataset_root": "/ssd1/itaein/datasets/RoboCerebra"
+  },
+  "splits": {
+    "train_count": 734,
+    "val_count": 85,
+    "test_count": 95,
+    "train_id_digest": "ac627aea50ee18f11c62d89c5462acfd95323be595e487c6a1fab648ba6b6f6a",
+    "val_id_digest": "957525c8b744750ba8a9a10a67419a4cda3ced459199b52d62e951dac82f8e52",
+    "test_id_digest": "2b82330207ab97297072659aa7bea473fb7d2d3d9e9022f9d5330da038e991ca"
+  },
+  "git": {
+    "workspace_root": "unavailable_not_a_worktree",
+    "mail_commit": "a8012a0018ce2e5e26adff3bb3336190be2595ea",
+    "mail_clean": true
+  },
+  "storage_free": {
+    "workspace": "134G",
+    "ssd1": "473G",
+    "tmp": "75G"
+  },
+  "stop_on_source_disappearance": true,
+  "automatic_recovery_or_deletion_allowed": false
+}

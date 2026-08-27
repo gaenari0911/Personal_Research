@@ -1,0 +1,40 @@
+{
+  "status": "BLOCKED_BY_R1_DATA_GATE",
+  "r1_data_gate": "FAIL",
+  "cleanup_authorized": false,
+  "captured_before_cleanup_decision": "2026-08-24",
+  "disk_free_bytes": 509766660096,
+  "targets": [
+    {
+      "requested_path": "/ssd1/itaein/datasets/LIBERO/libero_10",
+      "realpath": "/ssd1/itaein/datasets/LIBERO/libero_10",
+      "exact_path_match": true,
+      "is_symlink": false,
+      "exists": true,
+      "bytes": 13730613000,
+      "file_count": 10,
+      "safe_path_check": "PASS",
+      "deletion_authorized": false
+    },
+    {
+      "requested_path": "/ssd1/itaein/datasets/CALVIN/debug",
+      "realpath": "/ssd1/itaein/datasets/CALVIN/debug",
+      "exact_path_match": true,
+      "is_symlink": false,
+      "exists": true,
+      "bytes": 2615026055,
+      "file_count": 4476,
+      "safe_path_check": "PASS",
+      "deletion_authorized": false
+    }
+  ],
+  "preservation_check": {
+    "project_docs": true,
+    "project_analysis": true,
+    "project_annotations": true,
+    "project_source": true,
+    "review_artifacts": true,
+    "finding": "Research artifacts are preserved under /home/itaein/Personal_Research and are not cleanup targets."
+  },
+  "reason": "Destructive cleanup requires every G1-G11 check to pass. G1 and G7 failed because the acquired official-format archive lacks the required per-frame subtask annotations."
+}

@@ -1,0 +1,22 @@
+{
+  "official_dataset": "qiukingballball/RoboCerebra",
+  "revision": "5d2e1e361bf65aabbe4d18179515f5a10936cc96",
+  "local_root": "/ssd1/itaein/datasets/RoboCerebra",
+  "training_metadata_rows": 1000,
+  "remote_training_hdf5_objects": 996,
+  "remote_training_hdf5_bytes": 2456899944,
+  "materialized_training_hdf5_objects": 996,
+  "materialized_training_hdf5_bytes": 2456899944,
+  "materialization_complete_for_published_hdf5_objects": true,
+  "metadata_rows_without_published_hdf5": [
+    "coffee_table/case485",
+    "coffee_table/case487",
+    "coffee_table/case500",
+    "coffee_table/case622"
+  ],
+  "representative_mp4_objects_materialized": 5,
+  "representative_mp4_bytes": 11762470,
+  "download_strategy": "revision-pinned, include-filtered, resumable Hugging Face snapshot download",
+  "full_rgb_release_downloaded": false,
+  "existing_public_samples_preserved": true
+}

@@ -1,0 +1,22 @@
+{
+  "sequence_exact_match_at_4": 0.005525271512113616,
+  "ci_low": 0.002562238930659983,
+  "ci_high": 0.009343175647451952,
+  "trajectory_count": 95,
+  "sample_count": 14109,
+  "aggregation": "trajectory_macro_cell_step_hierarchy",
+  "bootstrap_unit": "trajectory",
+  "bootstrap_resamples": 2000,
+  "bootstrap_seed": 42,
+  "unambiguous_subset": {
+    "sequence_exact_match_at_4": 0.005525271512113616,
+    "ci_low": 0.002562238930659983,
+    "ci_high": 0.009343175647451952,
+    "trajectory_count": 95,
+    "sample_count": 13595,
+    "aggregation": "trajectory_macro_cell_step_hierarchy",
+    "bootstrap_unit": "trajectory",
+    "bootstrap_resamples": 2000,
+    "bootstrap_seed": 42
+  }
+}

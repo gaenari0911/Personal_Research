@@ -1,0 +1,102 @@
+{
+  "rule": "at most four deterministic evenly spaced frames per trajectory x Step x steps-since-transition bin",
+  "cap_per_trajectory_step_distance_bin": 4,
+  "temporal_correlation_controls": [
+    "cell cap",
+    "deterministic spacing",
+    "trajectory-macro metrics",
+    "trajectory-level bootstrap"
+  ],
+  "splits": {
+    "train": {
+      "trajectories": 734,
+      "raw_frames": 2160356,
+      "future_prediction_anchors_horizon_20": 2145676,
+      "trajectory_step_distance_cells": 39262,
+      "balanced_probe_samples": 156821,
+      "raw_to_balanced_ratio": 13.775935620867104,
+      "samples_per_trajectory": {
+        "min": 36.0,
+        "mean": 213.6525885558583,
+        "median": 208.0,
+        "p75": 241.0,
+        "p90": 284.0,
+        "max": 448.0
+      },
+      "samples_per_step": {
+        "min": 12.0,
+        "mean": 23.956767491597923,
+        "median": 24.0,
+        "p75": 28.0,
+        "p90": 28.0,
+        "max": 28.0
+      }
+    },
+    "val": {
+      "trajectories": 85,
+      "raw_frames": 250188,
+      "future_prediction_anchors_horizon_20": 248488,
+      "trajectory_step_distance_cells": 4579,
+      "balanced_probe_samples": 18293,
+      "raw_to_balanced_ratio": 13.676706937079757,
+      "samples_per_trajectory": {
+        "min": 88.0,
+        "mean": 215.21176470588236,
+        "median": 204.0,
+        "p75": 244.0,
+        "p90": 287.2000000000001,
+        "max": 435.0
+      },
+      "samples_per_step": {
+        "min": 12.0,
+        "mean": 23.881201044386422,
+        "median": 24.0,
+        "p75": 28.0,
+        "p90": 28.0,
+        "max": 28.0
+      }
+    },
+    "test": {
+      "trajectories": 95,
+      "raw_frames": 281487,
+      "future_prediction_anchors_horizon_20": 279587,
+      "trajectory_step_distance_cells": 5242,
+      "balanced_probe_samples": 20921,
+      "raw_to_balanced_ratio": 13.454758376750632,
+      "samples_per_trajectory": {
+        "min": 128.0,
+        "mean": 220.22105263157894,
+        "median": 212.0,
+        "p75": 242.0,
+        "p90": 303.6,
+        "max": 484.0
+      },
+      "samples_per_step": {
+        "min": 12.0,
+        "mean": 23.800910125142206,
+        "median": 24.0,
+        "p75": 25.0,
+        "p90": 28.0,
+        "max": 28.0
+      }
+    }
+  },
+  "dummy_representation_metric_smoke": {
+    "candidate_count": 4,
+    "target_index": 2,
+    "rank": 1,
+    "recall_at_1": 1.0,
+    "mrr": 1.0,
+    "trajectory_macro": {
+      "trajectory_count": 1,
+      "sample_count": 1,
+      "recall_at_1": 1.0,
+      "mrr": 1.0
+    }
+  },
+  "all_splits": {
+    "trajectories": 914,
+    "raw_frames": 2692031,
+    "balanced_probe_samples": 196035
+  }
+}

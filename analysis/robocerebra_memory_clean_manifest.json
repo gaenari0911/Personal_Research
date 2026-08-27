@@ -1,0 +1,17 @@
+{
+  "total": 1000,
+  "materialized": 996,
+  "valid": 914,
+  "invalid": 86,
+  "valid_rate_percent": 91.4,
+  "invalid_reason_counts": {
+    "frame_assignment_not_exact": 86,
+    "terminal_mismatch": 61,
+    "nonpositive_interval": 21,
+    "gap_or_overlap": 10,
+    "source_hdf5_missing": 4,
+    "first_start_not_zero": 2
+  },
+  "boundary_convention": "half-open [start,end)",
+  "off_by_one_correction_applied": false
+}

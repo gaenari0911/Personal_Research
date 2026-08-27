@@ -1,0 +1,17 @@
+#!/bin/bash
+#PBS -N r4_clip_cache
+#PBS -q pleiades3
+#PBS -l select=1:ncpus=4:ngpus=1
+#PBS -l walltime=04:00:00
+#PBS -j oe
+#PBS -o /home/itaein/Personal_Research/logs/r4/feature_scheduler.log
+
+set -euo pipefail
+cd /home/itaein/Personal_Research
+export PYTHONPATH=/home/itaein/Personal_Research/src
+exec >logs/r4/feature_cache.log 2>&1
+/home/itaein/.conda/envs/egodex-box/bin/python tools/precompute_r4_clip_cache.py \
+  --clip-cache /ssd1/itaein/datasets/RoboCerebra/model_cache/r4_clip \
+  --output /ssd1/itaein/datasets/RoboCerebra/r4_clip_cache \
+  --batch-size 64 \
+  --device cuda

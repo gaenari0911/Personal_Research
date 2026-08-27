@@ -1,0 +1,46 @@
+{
+  "schema_version": "r3-v1",
+  "status": "PASS",
+  "ready_for_representation_training": true,
+  "gates": {
+    "G1_common_rgb_state_language_encoder": true,
+    "G2_instantaneous_r_t": true,
+    "G3_mamba_z_t": true,
+    "G4_b0_fixed_window": true,
+    "G5_b1_persistent_full": true,
+    "G6_b2_persistent_current": true,
+    "G7_b3_persistent_transition": true,
+    "G8_b3_hold_no_op": true,
+    "G9_episode_only_reset": true,
+    "G10_future_head_info_nce": true,
+    "G11_linear_retrieval_probe": true,
+    "G12_instantaneous_control": true,
+    "G13_real_episode_smoke": true,
+    "G14_new_and_regression_tests": true
+  },
+  "tests": {
+    "status": "PASS",
+    "total": 66,
+    "passed": 66,
+    "failed": 0,
+    "skipped": 0,
+    "r1_r2_regression_passed": 40,
+    "new_r3_passed": 26,
+    "summary_tail": [
+      "----------------------------------------------------------------------",
+      "Ran 66 tests in 2.142s",
+      "",
+      "OK"
+    ]
+  },
+  "training_or_external_mutation": {
+    "representation_training": false,
+    "behavior_cloning": false,
+    "gpu_qsub": false,
+    "final_test_evaluation": false,
+    "full_clip_precompute": false,
+    "dataset_deleted": false,
+    "mail_upstream_modified": false,
+    "git_push": false
+  }
+}

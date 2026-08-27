@@ -1,0 +1,42 @@
+{
+  "task": "WashFruitColander",
+  "observation_index": "stored row t / rendered state[t]",
+  "target_action_index": "stored row t / action[t]",
+  "shift": 0,
+  "raw_storage_semantics": "pre-action state/image paired with the same-row action",
+  "source_evidence": [
+    {
+      "file": "robosuite/wrappers/data_collection_wrapper.py",
+      "function": "DataCollectionWrapper._on_first_interaction",
+      "evidence": "After the first env.step returns, the wrapper first appends _current_task_instance_state, the initial state before that action."
+    },
+    {
+      "file": "robosuite/wrappers/data_collection_wrapper.py",
+      "function": "DataCollectionWrapper.step",
+      "evidence": "Each action then appends the resulting simulator state and the action, producing T+1 states for T actions."
+    },
+    {
+      "file": "external/robocasa/robocasa/scripts/collect_demos.py",
+      "lines": "280-284",
+      "evidence": "The final extra state is deleted, leaving [initial state, ..., state after action T-2] aligned with actions [0, ..., T-1]."
+    },
+    {
+      "file": "external/robocasa/robocasa/scripts/dataset_scripts/convert_hdf5_lerobot.py",
+      "lines": "96-110, 281-300",
+      "evidence": "Conversion resets to states[t], renders that state, and writes actions[t] into the same LeRobot row."
+    }
+  ],
+  "numerical_evidence": {
+    "transition_pairs": 518396,
+    "eef_state_delta_definition": "observation.state[t+1,7:10] - observation.state[t,7:10]",
+    "same_row_action_flat_pearson": 0.9215029501970133,
+    "next_row_action_flat_pearson": 0.9066333833987786,
+    "same_row_action_mean_cosine": 0.8924583977012088,
+    "next_row_action_mean_cosine": 0.8734240584689588,
+    "interpretation": "The state transition following stored observation t agrees more strongly with action[t] than action[t+1], corroborating the source-derived shift 0 convention."
+  },
+  "video_evidence": "All 1,521 videos have the same episode length, frame rate, and row count as their corresponding parquet. Three two-view samples decode with frame correspondence intact.",
+  "raw_annotation_index": "Read raw annotation row t for action[t]. No semantic regrouping or timeline transformation is performed in R1.",
+  "previous_audit_correction": "The earlier post-action interpretation relied on an ambiguous collect_demos comment and missed the initial-state insertion in DataCollectionWrapper. It is superseded by this full source and numerical audit.",
+  "confidence": "HIGH"
+}

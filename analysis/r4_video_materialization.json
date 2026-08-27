@@ -1,0 +1,129 @@
+{
+  "schema_version": "r4-v1",
+  "scope_count": 20,
+  "downloaded": 20,
+  "already_present": 0,
+  "total_bytes": 34873483,
+  "records": [
+    {
+      "trajectory_id": "coffee_table/case180",
+      "path": "/ssd1/itaein/datasets/RoboCerebra/RoboCerebra_trainset/coffee_table/case180/case180.mp4",
+      "bytes": 1379117,
+      "status": "downloaded"
+    },
+    {
+      "trajectory_id": "coffee_table/case242",
+      "path": "/ssd1/itaein/datasets/RoboCerebra/RoboCerebra_trainset/coffee_table/case242/case242.mp4",
+      "bytes": 1505098,
+      "status": "downloaded"
+    },
+    {
+      "trajectory_id": "coffee_table/case280",
+      "path": "/ssd1/itaein/datasets/RoboCerebra/RoboCerebra_trainset/coffee_table/case280/case280.mp4",
+      "bytes": 1720364,
+      "status": "downloaded"
+    },
+    {
+      "trajectory_id": "coffee_table/case443",
+      "path": "/ssd1/itaein/datasets/RoboCerebra/RoboCerebra_trainset/coffee_table/case443/case443.mp4",
+      "bytes": 5537353,
+      "status": "downloaded"
+    },
+    {
+      "trajectory_id": "coffee_table/case522",
+      "path": "/ssd1/itaein/datasets/RoboCerebra/RoboCerebra_trainset/coffee_table/case522/case522.mp4",
+      "bytes": 1340678,
+      "status": "downloaded"
+    },
+    {
+      "trajectory_id": "coffee_table/case63",
+      "path": "/ssd1/itaein/datasets/RoboCerebra/RoboCerebra_trainset/coffee_table/case63/case63.mp4",
+      "bytes": 1769214,
+      "status": "downloaded"
+    },
+    {
+      "trajectory_id": "coffee_table/case688",
+      "path": "/ssd1/itaein/datasets/RoboCerebra/RoboCerebra_trainset/coffee_table/case688/case688.mp4",
+      "bytes": 1321316,
+      "status": "downloaded"
+    },
+    {
+      "trajectory_id": "coffee_table/case783",
+      "path": "/ssd1/itaein/datasets/RoboCerebra/RoboCerebra_trainset/coffee_table/case783/case783.mp4",
+      "bytes": 1113988,
+      "status": "downloaded"
+    },
+    {
+      "trajectory_id": "kitchen_table/case101",
+      "path": "/ssd1/itaein/datasets/RoboCerebra/RoboCerebra_trainset/kitchen_table/case101/case101.mp4",
+      "bytes": 1477071,
+      "status": "downloaded"
+    },
+    {
+      "trajectory_id": "kitchen_table/case22",
+      "path": "/ssd1/itaein/datasets/RoboCerebra/RoboCerebra_trainset/kitchen_table/case22/case22.mp4",
+      "bytes": 2795173,
+      "status": "downloaded"
+    },
+    {
+      "trajectory_id": "kitchen_table/case38",
+      "path": "/ssd1/itaein/datasets/RoboCerebra/RoboCerebra_trainset/kitchen_table/case38/case38.mp4",
+      "bytes": 2168466,
+      "status": "downloaded"
+    },
+    {
+      "trajectory_id": "kitchen_table/case61",
+      "path": "/ssd1/itaein/datasets/RoboCerebra/RoboCerebra_trainset/kitchen_table/case61/case61.mp4",
+      "bytes": 1436432,
+      "status": "downloaded"
+    },
+    {
+      "trajectory_id": "study_table/case1",
+      "path": "/ssd1/itaein/datasets/RoboCerebra/RoboCerebra_trainset/study_table/case1/case1.mp4",
+      "bytes": 1298947,
+      "status": "downloaded"
+    },
+    {
+      "trajectory_id": "study_table/case13",
+      "path": "/ssd1/itaein/datasets/RoboCerebra/RoboCerebra_trainset/study_table/case13/case13.mp4",
+      "bytes": 1675266,
+      "status": "downloaded"
+    },
+    {
+      "trajectory_id": "study_table/case60",
+      "path": "/ssd1/itaein/datasets/RoboCerebra/RoboCerebra_trainset/study_table/case60/case60.mp4",
+      "bytes": 1003773,
+      "status": "downloaded"
+    },
+    {
+      "trajectory_id": "study_table/case63",
+      "path": "/ssd1/itaein/datasets/RoboCerebra/RoboCerebra_trainset/study_table/case63/case63.mp4",
+      "bytes": 935024,
+      "status": "downloaded"
+    },
+    {
+      "trajectory_id": "coffee_table/case258",
+      "path": "/ssd1/itaein/datasets/RoboCerebra/RoboCerebra_trainset/coffee_table/case258/case258.mp4",
+      "bytes": 1674597,
+      "status": "downloaded"
+    },
+    {
+      "trajectory_id": "coffee_table/case693",
+      "path": "/ssd1/itaein/datasets/RoboCerebra/RoboCerebra_trainset/coffee_table/case693/case693.mp4",
+      "bytes": 1479495,
+      "status": "downloaded"
+    },
+    {
+      "trajectory_id": "kitchen_table/case24",
+      "path": "/ssd1/itaein/datasets/RoboCerebra/RoboCerebra_trainset/kitchen_table/case24/case24.mp4",
+      "bytes": 1938636,
+      "status": "downloaded"
+    },
+    {
+      "trajectory_id": "study_table/case31",
+      "path": "/ssd1/itaein/datasets/RoboCerebra/RoboCerebra_trainset/study_table/case31/case31.mp4",
+      "bytes": 1303475,
+      "status": "downloaded"
+    }
+  ]
+}

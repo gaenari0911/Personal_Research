@@ -1,0 +1,411 @@
+[
+  {
+    "review_role": "short",
+    "trajectory_id": "study_table/case47",
+    "num_frames": 258,
+    "num_steps": 2,
+    "video_relative_path": "RoboCerebra_trainset/study_table/case47/case47.mp4",
+    "full_instruction": "The task involves preparing a serving of cream cheese by picking it up from the study table, carrying it, and placing it onto a plate.",
+    "steps": [
+      {
+        "step_index": 0,
+        "text": "Pick up the cream cheese from the study table",
+        "start": 0,
+        "end": 179
+      },
+      {
+        "step_index": 1,
+        "text": "Pour the cream cheese to the plate",
+        "start": 179,
+        "end": 258
+      }
+    ],
+    "structural_boundary_quality": "GOOD"
+  },
+  {
+    "review_role": "median_length",
+    "trajectory_id": "coffee_table/case282",
+    "num_frames": 2811,
+    "num_steps": 6,
+    "video_relative_path": "RoboCerebra_trainset/coffee_table/case282/case282.mp4",
+    "full_instruction": "Organize a culinary scene by relocating items, including chocolate pudding, mugs, a frypan, and a wine bottle between a wooden cabinet, coffee table, and microwave.",
+    "steps": [
+      {
+        "step_index": 0,
+        "text": "open the wooden cabinet top region",
+        "start": 0,
+        "end": 374
+      },
+      {
+        "step_index": 1,
+        "text": "pick up the chocolate pudding from wooden cabinet top side",
+        "start": 374,
+        "end": 713
+      },
+      {
+        "step_index": 2,
+        "text": "Place down the chocolate pudding on coffee table",
+        "start": 713,
+        "end": 995
+      },
+      {
+        "step_index": 3,
+        "text": "open the microwave",
+        "start": 995,
+        "end": 1901
+      },
+      {
+        "step_index": 4,
+        "text": "pour out the wine bottle from coffee table",
+        "start": 1901,
+        "end": 2616
+      },
+      {
+        "step_index": 5,
+        "text": "Place the wine bottle on the coffee table",
+        "start": 2616,
+        "end": 2811
+      }
+    ],
+    "structural_boundary_quality": "GOOD"
+  },
+  {
+    "review_role": "long",
+    "trajectory_id": "coffee_table/case515",
+    "num_frames": 8120,
+    "num_steps": 19,
+    "video_relative_path": "RoboCerebra_trainset/coffee_table/case515/case515.mp4",
+    "full_instruction": "Set up a cooking and preparation station to heat milk in a frypan on a stove and create a dessert-drink blend by mixing chocolate pudding, orange juice, and wine in a black bowl before transferring it to a basket.",
+    "steps": [
+      {
+        "step_index": 0,
+        "text": "Pick up the frypan from the coffee table.",
+        "start": 0,
+        "end": 367
+      },
+      {
+        "step_index": 1,
+        "text": "Place the frypan on the flat stove at cook region.",
+        "start": 367,
+        "end": 698
+      },
+      {
+        "step_index": 2,
+        "text": "Turn on the flat stove at cook region.",
+        "start": 698,
+        "end": 1207
+      },
+      {
+        "step_index": 3,
+        "text": "Pick up the milk from the coffee table.",
+        "start": 1207,
+        "end": 1678
+      },
+      {
+        "step_index": 4,
+        "text": "Pour the milk into the frypan.",
+        "start": 1678,
+        "end": 2151
+      },
+      {
+        "step_index": 5,
+        "text": "Place the milk on the coffee table",
+        "start": 2151,
+        "end": 2642
+      },
+      {
+        "step_index": 6,
+        "text": "Pick up the akita black bowl from the coffee table.",
+        "start": 2642,
+        "end": 3048
+      },
+      {
+        "step_index": 7,
+        "text": "Place the akita black bowl on the wooden tray at contain region.",
+        "start": 3048,
+        "end": 3238
+      },
+      {
+        "step_index": 8,
+        "text": "Pick up the chocolate pudding from the coffee table.",
+        "start": 3238,
+        "end": 3514
+      },
+      {
+        "step_index": 9,
+        "text": "Place the chocolate pudding into the akita black bowl.",
+        "start": 3514,
+        "end": 3755
+      },
+      {
+        "step_index": 10,
+        "text": "Place the chocolate pudding on the coffee table",
+        "start": 3755,
+        "end": 4101
+      },
+      {
+        "step_index": 11,
+        "text": "Pick up the orange juice from the coffee table.",
+        "start": 4101,
+        "end": 4377
+      },
+      {
+        "step_index": 12,
+        "text": "Pour the orange juice into the akita black bowl.",
+        "start": 4377,
+        "end": 5946
+      },
+      {
+        "step_index": 13,
+        "text": "Place the orange juiceon the coffee table",
+        "start": 5946,
+        "end": 6299
+      },
+      {
+        "step_index": 14,
+        "text": "Pick up the wine bottle from the coffee table.",
+        "start": 6299,
+        "end": 6539
+      },
+      {
+        "step_index": 15,
+        "text": "Pour the wine bottle into the akita black bowl.",
+        "start": 6539,
+        "end": 7028
+      },
+      {
+        "step_index": 16,
+        "text": "Place the wine bottle on the coffee table",
+        "start": 7028,
+        "end": 7252
+      },
+      {
+        "step_index": 17,
+        "text": "Pick up the akita black bowl from the wooden tray at contain region.",
+        "start": 7252,
+        "end": 7802
+      },
+      {
+        "step_index": 18,
+        "text": "Place the akita black bowl into the basket at contain region.",
+        "start": 7802,
+        "end": 8120
+      }
+    ],
+    "structural_boundary_quality": "GOOD"
+  },
+  {
+    "review_role": "median_transition",
+    "trajectory_id": "coffee_table/case3",
+    "num_frames": 2513,
+    "num_steps": 9,
+    "video_relative_path": "RoboCerebra_trainset/coffee_table/case3/case3.mp4",
+    "full_instruction": "The task involves controlling a robotic arm to interact with objects including a wooden cabinet, chocolate pudding, milk, a porcelain mug, a red coffee mug, and barbecue sauce to transfer, pour, and rearrange items for organization and serving purposes.",
+    "steps": [
+      {
+        "step_index": 0,
+        "text": "Open wooden cabinet located at middle region.",
+        "start": 0,
+        "end": 455
+      },
+      {
+        "step_index": 1,
+        "text": "Pick up chocolate pudding from coffee table.",
+        "start": 455,
+        "end": 852
+      },
+      {
+        "step_index": 2,
+        "text": "Place down chocolate pudding into wooden cabinet located at top side.",
+        "start": 852,
+        "end": 1060
+      },
+      {
+        "step_index": 3,
+        "text": "Pick up milk from coffee table.",
+        "start": 1060,
+        "end": 1382
+      },
+      {
+        "step_index": 4,
+        "text": "Pour out milk from its container into porcelain mug.",
+        "start": 1382,
+        "end": 1660
+      },
+      {
+        "step_index": 5,
+        "text": "Place down milk onto coffee table.",
+        "start": 1660,
+        "end": 1941
+      },
+      {
+        "step_index": 6,
+        "text": "Pick up bbq sauce from coffee table.",
+        "start": 1941,
+        "end": 2221
+      },
+      {
+        "step_index": 7,
+        "text": "Pour out bbq sauce from its container onto coffee table.",
+        "start": 2221,
+        "end": 2324
+      },
+      {
+        "step_index": 8,
+        "text": "Place down bbq sauce onto coffee table.",
+        "start": 2324,
+        "end": 2513
+      }
+    ],
+    "structural_boundary_quality": "GOOD"
+  },
+  {
+    "review_role": "high_transition",
+    "trajectory_id": "coffee_table/case502",
+    "num_frames": 3696,
+    "num_steps": 23,
+    "video_relative_path": "RoboCerebra_trainset/coffee_table/case502/case502.mp4",
+    "full_instruction": "Organize a kitchen display by moving the white_bowl, cream_cheese, moka_pot, and chefmate_8_frypan from the coffee_table onto designated regions of the wooden_two_layer_shelf.",
+    "steps": [
+      {
+        "step_index": 0,
+        "text": "Place the white bowl on the coffee table.",
+        "start": 0,
+        "end": 139
+      },
+      {
+        "step_index": 1,
+        "text": "Pick the white bowl.",
+        "start": 139,
+        "end": 248
+      },
+      {
+        "step_index": 2,
+        "text": "Pick the white bowl from the coffee table.",
+        "start": 248,
+        "end": 318
+      },
+      {
+        "step_index": 3,
+        "text": "Move hand holding the white bowl toward the wooden two layer shelf top side.",
+        "start": 318,
+        "end": 365
+      },
+      {
+        "step_index": 4,
+        "text": "Place the white bowl over the wooden two layer shelf top side.",
+        "start": 365,
+        "end": 516
+      },
+      {
+        "step_index": 5,
+        "text": "Move hand toward the coffee table.",
+        "start": 516,
+        "end": 614
+      },
+      {
+        "step_index": 6,
+        "text": "Place the cream cheese on the coffee table.",
+        "start": 614,
+        "end": 672
+      },
+      {
+        "step_index": 7,
+        "text": "Pick the cream cheese.",
+        "start": 672,
+        "end": 791
+      },
+      {
+        "step_index": 8,
+        "text": "Pick the cream cheese from the coffee table.",
+        "start": 791,
+        "end": 850
+      },
+      {
+        "step_index": 9,
+        "text": "Move hand holding the cream cheese toward the white bowl.",
+        "start": 850,
+        "end": 1004
+      },
+      {
+        "step_index": 10,
+        "text": "Place the cream cheese into the white bowl.",
+        "start": 1004,
+        "end": 1222
+      },
+      {
+        "step_index": 11,
+        "text": "Pick cream cheese Place in coffee table.",
+        "start": 1222,
+        "end": 1410
+      },
+      {
+        "step_index": 12,
+        "text": "Place the moka pot on the coffee table.",
+        "start": 1410,
+        "end": 2087
+      },
+      {
+        "step_index": 13,
+        "text": "Pick the moka pot.",
+        "start": 2087,
+        "end": 2219
+      },
+      {
+        "step_index": 14,
+        "text": "Pick the moka pot from the coffee table.",
+        "start": 2219,
+        "end": 2315
+      },
+      {
+        "step_index": 15,
+        "text": "Move hand holding the moka pot toward the wooden two layer shelf top region.",
+        "start": 2315,
+        "end": 2369
+      },
+      {
+        "step_index": 16,
+        "text": "Place the moka pot onto the wooden two layer shelf top region.",
+        "start": 2369,
+        "end": 2552
+      },
+      {
+        "step_index": 17,
+        "text": "Move hand toward the coffee table.",
+        "start": 2552,
+        "end": 2722
+      },
+      {
+        "step_index": 18,
+        "text": "Place the frypan on the coffee table.",
+        "start": 2722,
+        "end": 2838
+      },
+      {
+        "step_index": 19,
+        "text": "Pick the frypan.",
+        "start": 2838,
+        "end": 3087
+      },
+      {
+        "step_index": 20,
+        "text": "Pick the frypan from the coffee table.",
+        "start": 3087,
+        "end": 3152
+      },
+      {
+        "step_index": 21,
+        "text": "Move hand holding the frypan toward the wooden two layer shelf bottom region.",
+        "start": 3152,
+        "end": 3467
+      },
+      {
+        "step_index": 22,
+        "text": "Place the frypan over the wooden two layer shelf bottom region.",
+        "start": 3467,
+        "end": 3696
+      }
+    ],
+    "structural_boundary_quality": "GOOD"
+  }
+]

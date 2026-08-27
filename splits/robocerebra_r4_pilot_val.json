@@ -1,0 +1,30 @@
+{
+  "schema_version": "r4-v1",
+  "seed": 42,
+  "parent_split": "val",
+  "trajectory_ids": [
+    "coffee_table/case258",
+    "coffee_table/case693",
+    "kitchen_table/case24",
+    "study_table/case31"
+  ],
+  "statistics": {
+    "count": 4,
+    "scene_counts": {
+      "coffee_table": 2,
+      "kitchen_table": 1,
+      "study_table": 1
+    },
+    "frames": {
+      "total": 11560,
+      "min": 2511,
+      "mean": 2890.0,
+      "max": 3326
+    },
+    "steps": {
+      "min": 8,
+      "mean": 9.25,
+      "max": 12
+    }
+  }
+}

@@ -1,0 +1,86 @@
+model_config_version: r3-v1
+seed: 42
+
+feature_encoder:
+  implementation: transformers.CLIPModel
+  checkpoint: openai/clip-vit-base-patch32
+  architecture: OpenAI CLIP ViT-B/32
+  frozen: true
+  normalize_output: true
+  visual_dim: 512
+  text_dim: 512
+  cache_interface: get_put_by_namespace_and_key
+  full_dataset_precompute_in_r3: false
+
+common_encoder:
+  state_input: panda_joint_qpos_7_plus_gripper_qpos_2
+  state_dim: 9
+  privileged_mujoco_state: false
+  state_encoder:
+    layers: [9, 64]
+    activation: GELU
+  observation_state_fusion:
+    input_dim: 576
+    projection: Linear(576,128)
+    normalization: LayerNorm(128)
+    output_name: r_t
+    probe_location: before_language_addition
+  language_projection: Linear(512,128)
+  temporal_token: LayerNorm(r_t+masked_language_projection)
+  hold_semantics: exact_zero_language_contribution
+
+temporal_backbone:
+  architecture: Mamba-1 selective state space model
+  source_contract: external/MaIL/agents/models/oc_ddpm/mamba.py::MixerModel
+  execution_backend: torch_reference_mamba1_selective_scan
+  optimized_r4_compatible_backend: mamba_ssm
+  d_model: 128
+  n_layer: 16
+  d_state: 16
+  d_conv: 4
+  expand: 2
+  dt_rank: auto
+  dt_min: 0.001
+  dt_max: 0.1
+  conv_bias: true
+  linear_bias: false
+  final_norm: LayerNorm(128)
+  z_t_probe_point: final_norm_output_after_current_token_before_future_head
+
+variants:
+  B0: {conditioning_mode: FULL, window_size: 5, persistent_state: false}
+  B1: {conditioning_mode: FULL, window_size: null, persistent_state: true}
+  B2: {conditioning_mode: CURRENT, window_size: null, persistent_state: true}
+  B3: {conditioning_mode: TRANSITION_EVENT, window_size: null, persistent_state: true}
+
+state_contract:
+  reset: episode_start_only
+  subtask_transition_reset: false
+  episode_end: discard
+  automatic_detach: false
+  full_sequence_and_recurrent_share_step_kernel: true
+
+future_objective:
+  horizon_frames: 20
+  horizon_seconds_at_20hz: 1.0
+  head: Linear(128,512)_then_L2_normalize
+  target: frozen_CLIP_external_RGB_at_t_plus_20
+  target_detach: true
+  loss: one_way_in_batch_InfoNCE
+  temperature: 0.07
+  action_head: false
+
+probe:
+  backbone_frozen_during_probe_fit: true
+  architecture: bias_free_Linear(128,512)_then_L2_normalize
+  temporal_input: z_t
+  instantaneous_control_input: r_t
+  candidate_features: same_frozen_CLIP_text_encoder
+  loss: trajectory_local_multi_positive_softmax_cross_entropy
+  depths: [0, 1, 2, 3]
+
+optimizer_contract_for_r4_only:
+  name: AdamW
+  learning_rate: 0.0001
+  weight_decay: 0.01
+  launch_training_in_r3: false

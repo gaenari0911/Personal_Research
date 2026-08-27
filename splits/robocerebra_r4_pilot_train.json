@@ -1,0 +1,42 @@
+{
+  "schema_version": "r4-v1",
+  "seed": 42,
+  "parent_split": "train",
+  "trajectory_ids": [
+    "coffee_table/case180",
+    "coffee_table/case242",
+    "coffee_table/case280",
+    "coffee_table/case443",
+    "coffee_table/case522",
+    "coffee_table/case63",
+    "coffee_table/case688",
+    "coffee_table/case783",
+    "kitchen_table/case101",
+    "kitchen_table/case22",
+    "kitchen_table/case38",
+    "kitchen_table/case61",
+    "study_table/case1",
+    "study_table/case13",
+    "study_table/case60",
+    "study_table/case63"
+  ],
+  "statistics": {
+    "count": 16,
+    "scene_counts": {
+      "coffee_table": 8,
+      "kitchen_table": 4,
+      "study_table": 4
+    },
+    "frames": {
+      "total": 46294,
+      "min": 1821,
+      "mean": 2893.375,
+      "max": 4079
+    },
+    "steps": {
+      "min": 6,
+      "mean": 8.8125,
+      "max": 11
+    }
+  }
+}

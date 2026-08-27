@@ -1,0 +1,138 @@
+{
+  "schema_version": "r4-v1",
+  "status": "PASS",
+  "scope": "pilot train16 plus val4 only",
+  "trajectory_count": 20,
+  "frame_count": 57854,
+  "dtype": "torch.float16",
+  "normalized": true,
+  "mapping": "video image index t equals timestep t; T+1 extra final image excluded",
+  "clip_checkpoint": "openai/clip-vit-base-patch32",
+  "clip_all_parameters_frozen": true,
+  "device": "cuda",
+  "runtime_seconds": 360.6289709939156,
+  "gpu_peak_memory_bytes": 811025408,
+  "records": [
+    {
+      "trajectory_id": "coffee_table/case180",
+      "frames": 2326,
+      "cache": "/ssd1/itaein/datasets/RoboCerebra/r4_clip_cache/coffee_table__case180.pt",
+      "bytes": 2480395
+    },
+    {
+      "trajectory_id": "coffee_table/case242",
+      "frames": 2986,
+      "cache": "/ssd1/itaein/datasets/RoboCerebra/r4_clip_cache/coffee_table__case242.pt",
+      "bytes": 3177931
+    },
+    {
+      "trajectory_id": "coffee_table/case280",
+      "frames": 3202,
+      "cache": "/ssd1/itaein/datasets/RoboCerebra/r4_clip_cache/coffee_table__case280.pt",
+      "bytes": 3407947
+    },
+    {
+      "trajectory_id": "coffee_table/case443",
+      "frames": 4070,
+      "cache": "/ssd1/itaein/datasets/RoboCerebra/r4_clip_cache/coffee_table__case443.pt",
+      "bytes": 4323915
+    },
+    {
+      "trajectory_id": "coffee_table/case522",
+      "frames": 2615,
+      "cache": "/ssd1/itaein/datasets/RoboCerebra/r4_clip_cache/coffee_table__case522.pt",
+      "bytes": 2782667
+    },
+    {
+      "trajectory_id": "coffee_table/case63",
+      "frames": 3704,
+      "cache": "/ssd1/itaein/datasets/RoboCerebra/r4_clip_cache/coffee_table__case63.pt",
+      "bytes": 3937988
+    },
+    {
+      "trajectory_id": "coffee_table/case688",
+      "frames": 2164,
+      "cache": "/ssd1/itaein/datasets/RoboCerebra/r4_clip_cache/coffee_table__case688.pt",
+      "bytes": 2308683
+    },
+    {
+      "trajectory_id": "coffee_table/case783",
+      "frames": 2093,
+      "cache": "/ssd1/itaein/datasets/RoboCerebra/r4_clip_cache/coffee_table__case783.pt",
+      "bytes": 2230347
+    },
+    {
+      "trajectory_id": "kitchen_table/case101",
+      "frames": 2356,
+      "cache": "/ssd1/itaein/datasets/RoboCerebra/r4_clip_cache/kitchen_table__case101.pt",
+      "bytes": 2508114
+    },
+    {
+      "trajectory_id": "kitchen_table/case22",
+      "frames": 4048,
+      "cache": "/ssd1/itaein/datasets/RoboCerebra/r4_clip_cache/kitchen_table__case22.pt",
+      "bytes": 4302667
+    },
+    {
+      "trajectory_id": "kitchen_table/case38",
+      "frames": 3073,
+      "cache": "/ssd1/itaein/datasets/RoboCerebra/r4_clip_cache/kitchen_table__case38.pt",
+      "bytes": 3272203
+    },
+    {
+      "trajectory_id": "kitchen_table/case61",
+      "frames": 1821,
+      "cache": "/ssd1/itaein/datasets/RoboCerebra/r4_clip_cache/kitchen_table__case61.pt",
+      "bytes": 1944075
+    },
+    {
+      "trajectory_id": "study_table/case1",
+      "frames": 2983,
+      "cache": "/ssd1/itaein/datasets/RoboCerebra/r4_clip_cache/study_table__case1.pt",
+      "bytes": 3171638
+    },
+    {
+      "trajectory_id": "study_table/case13",
+      "frames": 4079,
+      "cache": "/ssd1/itaein/datasets/RoboCerebra/r4_clip_cache/study_table__case13.pt",
+      "bytes": 4338557
+    },
+    {
+      "trajectory_id": "study_table/case60",
+      "frames": 2223,
+      "cache": "/ssd1/itaein/datasets/RoboCerebra/r4_clip_cache/study_table__case60.pt",
+      "bytes": 2370173
+    },
+    {
+      "trajectory_id": "study_table/case63",
+      "frames": 2551,
+      "cache": "/ssd1/itaein/datasets/RoboCerebra/r4_clip_cache/study_table__case63.pt",
+      "bytes": 2715837
+    },
+    {
+      "trajectory_id": "coffee_table/case258",
+      "frames": 3326,
+      "cache": "/ssd1/itaein/datasets/RoboCerebra/r4_clip_cache/coffee_table__case258.pt",
+      "bytes": 3537355
+    },
+    {
+      "trajectory_id": "coffee_table/case693",
+      "frames": 2511,
+      "cache": "/ssd1/itaein/datasets/RoboCerebra/r4_clip_cache/coffee_table__case693.pt",
+      "bytes": 2674443
+    },
+    {
+      "trajectory_id": "kitchen_table/case24",
+      "frames": 2945,
+      "cache": "/ssd1/itaein/datasets/RoboCerebra/r4_clip_cache/kitchen_table__case24.pt",
+      "bytes": 3133451
+    },
+    {
+      "trajectory_id": "study_table/case31",
+      "frames": 2778,
+      "cache": "/ssd1/itaein/datasets/RoboCerebra/r4_clip_cache/study_table__case31.pt",
+      "bytes": 2960509
+    }
+  ],
+  "test_split_used": false
+}

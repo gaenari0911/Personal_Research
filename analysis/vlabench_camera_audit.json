@@ -1,0 +1,32 @@
+{
+  "audit_date": "2026-08-24",
+  "released_video": {
+    "fps": 10,
+    "resolution": [224, 224],
+    "codec": "AV1",
+    "pixel_format": "yuv420p",
+    "keys": [
+      "observation.images.image",
+      "observation.images.second_image",
+      "observation.images.wrist_image"
+    ]
+  },
+  "visual_role": {
+    "observation.images.image": "broad external/front view",
+    "observation.images.second_image": "external side/oblique view",
+    "observation.images.wrist_image": "wrist-mounted close view"
+  },
+  "mail_mapping": {
+    "external_encoder_input": "observation.images.image",
+    "wrist_encoder_input": "observation.images.wrist_image",
+    "resize": "224x224 -> 128x128 with aspect ratio unchanged",
+    "third_view": "omit from policy; retain only for optional human QA"
+  },
+  "representative_review": [
+    {"task": "cluster_billiards", "episode": 0, "frames": 610, "duration_s": 61.0},
+    {"task": "cluster_drink", "episode": 8, "frames": 545, "duration_s": 54.5},
+    {"task": "cluster_toy", "episode": 30, "frames": 634, "duration_s": 63.4}
+  ],
+  "two_view_sufficient_for_ranked_candidates": true,
+  "known_limit": "Object occlusion and category identity can still be ambiguous; the side view helps review but is not required for preserving the two-encoder MaIL baseline."
+}

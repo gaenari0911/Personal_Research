@@ -1,0 +1,95 @@
+{
+  "schema_version": "stage-a-v1",
+  "mode": "smoke",
+  "variant": "B0",
+  "status": "PASS",
+  "trajectory_id": "study_table/case13",
+  "sequence_length": 4079,
+  "anchors": 8,
+  "updates": 1,
+  "initial_validation": {
+    "loss": 2.079657554626465,
+    "positive_cosine": 0.0030339944642037153,
+    "negative_cosine": 0.0026492353063076735,
+    "temporal": {
+      "mean_norm": 11.313652038574219,
+      "mean_per_dimension_std": 0.09805206954479218,
+      "pairwise_cosine_mean": 0.9865949749946594,
+      "pairwise_cosine_std": 0.01174782682210207,
+      "collapsed": false,
+      "thresholds": {
+        "minimum_mean_per_dimension_std": 0.001,
+        "minimum_pairwise_cosine_std": 0.001
+      }
+    },
+    "future_prediction": {
+      "mean_norm": 1.0,
+      "mean_per_dimension_std": 0.004300790373235941,
+      "pairwise_cosine_mean": 0.9867753386497498,
+      "pairwise_cosine_std": 0.011637789197266102,
+      "collapsed": false,
+      "thresholds": {
+        "minimum_mean_per_dimension_std": 0.001,
+        "minimum_pairwise_cosine_std": 0.001
+      }
+    },
+    "episodes": 1,
+    "anchors": 8
+  },
+  "train_update": {
+    "loss": 2.079657554626465,
+    "positive_cosine": 0.0030339944642037153,
+    "negative_cosine": 0.0026492353063076735,
+    "gradient_norm_before_clip": 0.2575182020664215,
+    "parameter_norm": 621.8184016594724,
+    "z_norm": 11.313652992248535,
+    "z_mean_per_dimension_std": 0.09805206209421158,
+    "prediction_mean_per_dimension_std": 0.004300790373235941,
+    "anchors": 8
+  },
+  "final_validation": {
+    "loss": 2.073807716369629,
+    "positive_cosine": 0.0004984942497685552,
+    "negative_cosine": -0.00021676154574379325,
+    "temporal": {
+      "mean_norm": 11.313450813293457,
+      "mean_per_dimension_std": 0.09929447621107101,
+      "pairwise_cosine_mean": 0.9862278699874878,
+      "pairwise_cosine_std": 0.012115397490561008,
+      "collapsed": false,
+      "thresholds": {
+        "minimum_mean_per_dimension_std": 0.001,
+        "minimum_pairwise_cosine_std": 0.001
+      }
+    },
+    "future_prediction": {
+      "mean_norm": 1.0,
+      "mean_per_dimension_std": 0.004354453645646572,
+      "pairwise_cosine_mean": 0.98639976978302,
+      "pairwise_cosine_std": 0.012023916468024254,
+      "collapsed": false,
+      "thresholds": {
+        "minimum_mean_per_dimension_std": 0.001,
+        "minimum_pairwise_cosine_std": 0.001
+      }
+    },
+    "episodes": 1,
+    "anchors": 8
+  },
+  "collapse_observed": false,
+  "runtime_seconds": 1.8286301570478827,
+  "train_update_seconds": 0.2509186780080199,
+  "validation_seconds": 0.3672540499828756,
+  "validation_passes": 2,
+  "gpu_peak_memory_bytes": 74430976,
+  "common_initialization_sha256": "aeffa23a4387256da39a517eb38c06197eb7302d65814dacdfe90cdaef511dcd",
+  "checkpoint": "/home/itaein/Personal_Research/checkpoints/stage_a/smoke/B0/smoke.pt",
+  "full_training_must_reload_common_init": true,
+  "b3_hold_state_sanity": "NOT_APPLICABLE",
+  "state_reset": "no_persistent_state",
+  "test_split_used": false,
+  "behavior_cloning": false,
+  "action_prediction": false,
+  "amp": false,
+  "training_dtype": "float32"
+}

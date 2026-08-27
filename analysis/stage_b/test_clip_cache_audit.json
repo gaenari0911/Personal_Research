@@ -1,0 +1,692 @@
+{
+  "schema_version": "stage-a-v1",
+  "status": "PASS",
+  "cache_gate": "PASS",
+  "split_scope": "test",
+  "expected_episodes": 95,
+  "completed": 95,
+  "missing": [],
+  "invalid": [],
+  "frames": 281487,
+  "bytes": 299598124,
+  "dtype": "torch.float16",
+  "dimension": 512,
+  "normalized": true,
+  "alignment": "video image t equals model timestep t; extra T image excluded",
+  "clip_checkpoint": "openai/clip-vit-base-patch32",
+  "clip_all_parameters_frozen": true,
+  "text_features": "FULL and official Step frozen CLIP embeddings embedded per trajectory",
+  "cache_root": "/ssd1/itaein/datasets/RoboCerebra/r4_clip_cache",
+  "runtime_seconds": 0.0,
+  "device": "cuda:parallel-2",
+  "gpu_peak_memory_bytes": 0,
+  "test_split_used": true,
+  "final_test_gate": true,
+  "records_this_run": [
+    {
+      "trajectory_id": "coffee_table/case103",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 3260,
+      "bytes": 3470228
+    },
+    {
+      "trajectory_id": "coffee_table/case117",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 2473,
+      "bytes": 2635028
+    },
+    {
+      "trajectory_id": "coffee_table/case140",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 3360,
+      "bytes": 3571092
+    },
+    {
+      "trajectory_id": "coffee_table/case151",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 2587,
+      "bytes": 2753812
+    },
+    {
+      "trajectory_id": "coffee_table/case170",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 1743,
+      "bytes": 1859156
+    },
+    {
+      "trajectory_id": "coffee_table/case203",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 2991,
+      "bytes": 3183060
+    },
+    {
+      "trajectory_id": "coffee_table/case272",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 5063,
+      "bytes": 5379348
+    },
+    {
+      "trajectory_id": "coffee_table/case296",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 3649,
+      "bytes": 3879508
+    },
+    {
+      "trajectory_id": "coffee_table/case303",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 3013,
+      "bytes": 3208404
+    },
+    {
+      "trajectory_id": "coffee_table/case327",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 1659,
+      "bytes": 1769108
+    },
+    {
+      "trajectory_id": "coffee_table/case332",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 2965,
+      "bytes": 3153428
+    },
+    {
+      "trajectory_id": "coffee_table/case341",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 2662,
+      "bytes": 2834324
+    },
+    {
+      "trajectory_id": "coffee_table/case350",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 1335,
+      "bytes": 1425620
+    },
+    {
+      "trajectory_id": "coffee_table/case354",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 3136,
+      "bytes": 3337748
+    },
+    {
+      "trajectory_id": "coffee_table/case369",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 3992,
+      "bytes": 4247252
+    },
+    {
+      "trajectory_id": "coffee_table/case383",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 2286,
+      "bytes": 2434708
+    },
+    {
+      "trajectory_id": "coffee_table/case399",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 2789,
+      "bytes": 2969940
+    },
+    {
+      "trajectory_id": "coffee_table/case435",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 2141,
+      "bytes": 2282068
+    },
+    {
+      "trajectory_id": "coffee_table/case459",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 3744,
+      "bytes": 3987412
+    },
+    {
+      "trajectory_id": "coffee_table/case480",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 3115,
+      "bytes": 3312468
+    },
+    {
+      "trajectory_id": "coffee_table/case511",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 2952,
+      "bytes": 3142740
+    },
+    {
+      "trajectory_id": "coffee_table/case525",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 2862,
+      "bytes": 3046292
+    },
+    {
+      "trajectory_id": "coffee_table/case534",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 2843,
+      "bytes": 3025172
+    },
+    {
+      "trajectory_id": "coffee_table/case548",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 3565,
+      "bytes": 3791508
+    },
+    {
+      "trajectory_id": "coffee_table/case562",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 4712,
+      "bytes": 5010452
+    },
+    {
+      "trajectory_id": "coffee_table/case587",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 3823,
+      "bytes": 4068116
+    },
+    {
+      "trajectory_id": "coffee_table/case592",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 3222,
+      "bytes": 3429972
+    },
+    {
+      "trajectory_id": "coffee_table/case615",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 4030,
+      "bytes": 4287508
+    },
+    {
+      "trajectory_id": "coffee_table/case64",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 3624,
+      "bytes": 3856084
+    },
+    {
+      "trajectory_id": "coffee_table/case675",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 2175,
+      "bytes": 2318100
+    },
+    {
+      "trajectory_id": "coffee_table/case708",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 1711,
+      "bytes": 1824212
+    },
+    {
+      "trajectory_id": "coffee_table/case725",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 1262,
+      "bytes": 1347220
+    },
+    {
+      "trajectory_id": "coffee_table/case736",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 2594,
+      "bytes": 2762260
+    },
+    {
+      "trajectory_id": "coffee_table/case753",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 2471,
+      "bytes": 2630804
+    },
+    {
+      "trajectory_id": "coffee_table/case772",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 2152,
+      "bytes": 2292692
+    },
+    {
+      "trajectory_id": "coffee_table/case776",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 2151,
+      "bytes": 2291604
+    },
+    {
+      "trajectory_id": "coffee_table/case795",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 3212,
+      "bytes": 3415252
+    },
+    {
+      "trajectory_id": "kitchen_table/case110",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 3492,
+      "bytes": 3714132
+    },
+    {
+      "trajectory_id": "kitchen_table/case120",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 6018,
+      "bytes": 6395860
+    },
+    {
+      "trajectory_id": "kitchen_table/case34",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 3604,
+      "bytes": 3839060
+    },
+    {
+      "trajectory_id": "kitchen_table/case5",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 2876,
+      "bytes": 3064212
+    },
+    {
+      "trajectory_id": "kitchen_table/case62",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 1519,
+      "bytes": 1623764
+    },
+    {
+      "trajectory_id": "kitchen_table/case80",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 4008,
+      "bytes": 4261076
+    },
+    {
+      "trajectory_id": "kitchen_table/case96",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 2474,
+      "bytes": 2634004
+    },
+    {
+      "trajectory_id": "study_table/case23",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 3095,
+      "bytes": 3293268
+    },
+    {
+      "trajectory_id": "study_table/case40",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 3047,
+      "bytes": 3245460
+    },
+    {
+      "trajectory_id": "study_table/case46",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 1842,
+      "bytes": 1964116
+    },
+    {
+      "trajectory_id": "study_table/case54",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 5702,
+      "bytes": 6057748
+    },
+    {
+      "trajectory_id": "coffee_table/case105",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 2691,
+      "bytes": 2864020
+    },
+    {
+      "trajectory_id": "coffee_table/case128",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 3479,
+      "bytes": 3700308
+    },
+    {
+      "trajectory_id": "coffee_table/case142",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 2182,
+      "bytes": 2322452
+    },
+    {
+      "trajectory_id": "coffee_table/case165",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 2357,
+      "bytes": 2512020
+    },
+    {
+      "trajectory_id": "coffee_table/case20",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 2567,
+      "bytes": 2731540
+    },
+    {
+      "trajectory_id": "coffee_table/case225",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 2082,
+      "bytes": 2216468
+    },
+    {
+      "trajectory_id": "coffee_table/case283",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 4126,
+      "bytes": 4386132
+    },
+    {
+      "trajectory_id": "coffee_table/case3",
+      "status": "generated",
+      "video": "existing",
+      "frames": 2513,
+      "bytes": 2676372
+    },
+    {
+      "trajectory_id": "coffee_table/case31",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 3197,
+      "bytes": 3402452
+    },
+    {
+      "trajectory_id": "coffee_table/case331",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 3549,
+      "bytes": 3773524
+    },
+    {
+      "trajectory_id": "coffee_table/case338",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 1742,
+      "bytes": 1856020
+    },
+    {
+      "trajectory_id": "coffee_table/case348",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 2257,
+      "bytes": 2406036
+    },
+    {
+      "trajectory_id": "coffee_table/case351",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 4508,
+      "bytes": 4791060
+    },
+    {
+      "trajectory_id": "coffee_table/case366",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 3006,
+      "bytes": 3198932
+    },
+    {
+      "trajectory_id": "coffee_table/case370",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 1545,
+      "bytes": 1647252
+    },
+    {
+      "trajectory_id": "coffee_table/case384",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 2671,
+      "bytes": 2843860
+    },
+    {
+      "trajectory_id": "coffee_table/case424",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 2196,
+      "bytes": 2339348
+    },
+    {
+      "trajectory_id": "coffee_table/case458",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 3526,
+      "bytes": 3749140
+    },
+    {
+      "trajectory_id": "coffee_table/case473",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 4015,
+      "bytes": 4275732
+    },
+    {
+      "trajectory_id": "coffee_table/case503",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 4873,
+      "bytes": 5181140
+    },
+    {
+      "trajectory_id": "coffee_table/case515",
+      "status": "generated",
+      "video": "existing",
+      "frames": 8120,
+      "bytes": 8630164
+    },
+    {
+      "trajectory_id": "coffee_table/case531",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 3469,
+      "bytes": 3689748
+    },
+    {
+      "trajectory_id": "coffee_table/case541",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 4230,
+      "bytes": 4499540
+    },
+    {
+      "trajectory_id": "coffee_table/case553",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 2230,
+      "bytes": 2374356
+    },
+    {
+      "trajectory_id": "coffee_table/case577",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 1750,
+      "bytes": 1869652
+    },
+    {
+      "trajectory_id": "coffee_table/case59",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 4097,
+      "bytes": 4354388
+    },
+    {
+      "trajectory_id": "coffee_table/case609",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 2894,
+      "bytes": 3079188
+    },
+    {
+      "trajectory_id": "coffee_table/case627",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 3354,
+      "bytes": 3569876
+    },
+    {
+      "trajectory_id": "coffee_table/case662",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 2115,
+      "bytes": 2251412
+    },
+    {
+      "trajectory_id": "coffee_table/case690",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 2270,
+      "bytes": 2419796
+    },
+    {
+      "trajectory_id": "coffee_table/case722",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 2315,
+      "bytes": 2466516
+    },
+    {
+      "trajectory_id": "coffee_table/case728",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 4106,
+      "bytes": 4366996
+    },
+    {
+      "trajectory_id": "coffee_table/case752",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 2131,
+      "bytes": 2269396
+    },
+    {
+      "trajectory_id": "coffee_table/case762",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 2495,
+      "bytes": 2654228
+    },
+    {
+      "trajectory_id": "coffee_table/case773",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 1832,
+      "bytes": 1953492
+    },
+    {
+      "trajectory_id": "coffee_table/case777",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 2438,
+      "bytes": 2595860
+    },
+    {
+      "trajectory_id": "kitchen_table/case109",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 2038,
+      "bytes": 2169812
+    },
+    {
+      "trajectory_id": "kitchen_table/case119",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 3403,
+      "bytes": 3618772
+    },
+    {
+      "trajectory_id": "kitchen_table/case26",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 2496,
+      "bytes": 2658324
+    },
+    {
+      "trajectory_id": "kitchen_table/case37",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 1320,
+      "bytes": 1410772
+    },
+    {
+      "trajectory_id": "kitchen_table/case57",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 2456,
+      "bytes": 2622164
+    },
+    {
+      "trajectory_id": "kitchen_table/case69",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 3234,
+      "bytes": 3445844
+    },
+    {
+      "trajectory_id": "kitchen_table/case90",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 1960,
+      "bytes": 2086100
+    },
+    {
+      "trajectory_id": "kitchen_table/case98",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 2616,
+      "bytes": 2784532
+    },
+    {
+      "trajectory_id": "study_table/case32",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 4105,
+      "bytes": 4370132
+    },
+    {
+      "trajectory_id": "study_table/case44",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 1299,
+      "bytes": 1386452
+    },
+    {
+      "trajectory_id": "study_table/case52",
+      "status": "generated",
+      "video": "downloaded",
+      "frames": 2631,
+      "bytes": 2800404
+    }
+  ]
+}

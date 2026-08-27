@@ -1,0 +1,27 @@
+{
+  "original_hdf5_contains_rgb": false,
+  "original_external_mp4_paths_in_metadata": 1000,
+  "audited_original_samples": {
+    "count": 3,
+    "video_frames_equal_action_frames_plus_one": 3,
+    "container_fps": 60,
+    "logical_state_frequency_hz": 20,
+    "mapping": "MP4 image index t is aligned to original trajectory timestep t; the extra final image is not a model timestep. Container FPS controls playback speed only; do not decimate every third frame."
+  },
+  "official_conversion": {
+    "source_frequency_hz": 20,
+    "mapping": "zip(orig_states, orig_actions), remove detected no-op indices, set each retained state, render agentview and eye_in_hand, and pair the retained same-index action",
+    "boundary_remap": "bisect retained source indices at each official end boundary",
+    "important_limitation": "published converted episodes are no-op-compressed atomic Step slices; their local image index is not the original continuous timestep",
+    "external": "agentview_rgb 256x256",
+    "wrist": "eye_in_hand_rgb 256x256"
+  },
+  "lerobot_metadata": {
+    "frequency_hz": 20,
+    "external": "observation.images.image 256x256",
+    "wrist": "observation.images.wrist_image 256x256",
+    "limitation": "converted episodes are atomic-step slices, not primary continuous trajectories"
+  },
+  "primary_observation_recommendation": "Use original external MP4 image t for continuous timestep t. For two-view experiments, replay original state t and render both cameras without no-op filtering; state+external-only is already usable.",
+  "visual_gate": "PASS_ORIGINAL_EXTERNAL_TIMESTEP_MAPPING"
+}

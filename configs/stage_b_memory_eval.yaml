@@ -1,0 +1,83 @@
+stage: stage_b_memory_evaluation
+schema_version: stage-b-v1
+seed: 42
+
+execution:
+  auto_after_stage_a_in_pbs: true
+  minimum_remaining_walltime_seconds: 43200
+  report_validation_metrics: false
+  final_test_after_val_selection: true
+  parallel_probe_variants: true
+  parallel_test_cache: true
+  parallel_final_metrics: true
+
+dataset:
+  episode_index: analysis/robocerebra_memory_episode_index.json
+  train_split: splits/robocerebra_memory_train.json
+  val_split: splits/robocerebra_memory_val.json
+  test_split: splits/robocerebra_memory_test.json
+  expected_trajectories: {train: 734, val: 85, test: 95}
+
+stage_a_checkpoints:
+  B0: checkpoints/stage_a/B0/best_val.pt
+  B1: checkpoints/stage_a/B1/best_val.pt
+  B2: checkpoints/stage_a/B2/best_val.pt
+  B3: checkpoints/stage_a/B3/best_val.pt
+
+representations:
+  instantaneous: {name: r_t, dimension: 128, language: false, temporal_history: false}
+  temporal: {name: z_t, dimension: 128, definition: final_normalized_mamba_output}
+  storage_dtype: float16
+  backbone_frozen: true
+
+probe:
+  targets: [current, prev1, prev2, prev3]
+  independent: true
+  same_current_z_t_for_all_temporal_targets: true
+  architecture: {type: Linear, input_dim: 128, output_dim: 512, bias: false}
+  candidate_scope: trajectory_local_official_step_texts
+  candidate_features: frozen_normalized_clip_text_features_from_stage_a_cache
+  duplicate_policy: normalized_text_multi_positive_equivalence_class
+
+probe_training:
+  # Stage B implementation choices: R2 fixes the loss family but not these values.
+  optimizer: AdamW
+  learning_rate: 0.001
+  weight_decay: 0.01
+  temperature: 1.0
+  max_epochs: 20
+  early_stopping_patience: 5
+  validation_selection: lowest_trajectory_macro_multi_positive_loss
+  device: cpu
+
+sampling:
+  source: src/robocerebra_memory/sampling.py
+  unit: trajectory_x_step_x_distance_bin
+  cap_per_trajectory_step_distance_bin: 4
+  selector: deterministic_evenly_spaced_inclusive_grid
+  distance_bins: [0-4, 5-19, 20-49, 50-99, 100-199, 200-399, 400+]
+  transition_bins: [0, 1, 2, 3, 4, 5, 6, 7, 8+]
+
+evaluation:
+  aggregation: trajectory_macro_cell_step_hierarchy
+  bootstrap_unit: trajectory
+  bootstrap_resamples: 2000
+  bootstrap_seed: 42
+  confidence: 0.95
+  frame_bootstrap: false
+  test_requires_final_test_flag: true
+  final_test_exactly_once: true
+
+visualization:
+  dependency_free: true
+  formats: [svg, html]
+  y_axis_range: [0.0, 1.0]
+  show_trajectory_bootstrap_ci: true
+  show_sample_counts: true
+  b2_oracle_style: dashed
+  automatic_after_evaluation: true
+
+outputs:
+  representation_root: analysis/stage_b/representations
+  probe_root: checkpoints/stage_b
+  report_root: analysis/stage_b

@@ -1,0 +1,16 @@
+{
+  "task": "WashFruitColander",
+  "labels_generated": false,
+  "boundary_rows": 0,
+  "official_dataset_annotation": false,
+  "derived_from_official_simulator_task_logic": false,
+  "manual_boundary": false,
+  "heuristic_only_labels": false,
+  "vlm_annotation": false,
+  "predicate_version": "washfruitcolander-r1.6-source-audit-v1",
+  "task_source_commit": "a07e365c958c4216cd6bbd5f30b47f09a65c6f00",
+  "generator_version": "r1.6",
+  "planned_label_source_if_unblocked": "derived_from_official_robocasa_simulator_predicates",
+  "planned_human_editing": false,
+  "blocker": "Exact official predicates could not be evaluated on recorded states; no provenance claim is attached to nonexistent labels."
+}

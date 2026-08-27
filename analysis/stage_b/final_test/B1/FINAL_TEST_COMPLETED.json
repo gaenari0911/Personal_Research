@@ -1,0 +1,18 @@
+{
+  "status": "COMPLETE",
+  "variant": "B1",
+  "split": "test",
+  "probe_checkpoint": "/home/itaein/Personal_Research/checkpoints/stage_b/B1/selected_probes.pt",
+  "probe_checkpoint_sha256": "369db14907f381373df754aa0e4f4cfab16295061eb07df9fa837330a6b734b8",
+  "stage_a_checkpoint": {
+    "path": "/home/itaein/Personal_Research/checkpoints/stage_a/B1/best_val.pt",
+    "variant": "B1",
+    "global_update": 734,
+    "completed_epoch": 1,
+    "best_val": 3.3507321806514963,
+    "state_dict_sha256": "8a54181ff307779428de494c578456de4bba88e11cf9489d844889faf19dbc16"
+  },
+  "sampling_sha256": "900795b166e3f512aff217d95783ead7a0abc901d01e049959daaa2c251e27ed",
+  "trajectory_count": 95,
+  "exactly_once_gate": true
+}

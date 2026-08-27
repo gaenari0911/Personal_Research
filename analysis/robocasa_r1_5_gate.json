@@ -1,0 +1,61 @@
+{
+  "task": "WashFruitColander",
+  "r1_5_gate": "CONDITIONAL",
+  "official_source_identified": true,
+  "official_bytes_acquired": false,
+  "staging_path_created": false,
+  "previous_dataset_preserved": true,
+  "libero_preserved": true,
+  "calvin_preserved": true,
+  "gate_checks": {
+    "G1_latest_official_annotation_source": {
+      "result": "CONDITIONAL",
+      "reason": "The official release and exact endpoint are confirmed, but the maintainer-controlled Box endpoint returns HTTP 404."
+    },
+    "G2_required_fields_present": {
+      "result": "BLOCKED",
+      "reason": "Official parquet bytes are unavailable."
+    },
+    "G3_reliable_episode_mapping": {
+      "result": "BLOCKED",
+      "old_episode_fingerprints_recorded": 507,
+      "exact_matches": 0
+    },
+    "G4_at_least_400_arm_only_annotations": {
+      "result": "BLOCKED",
+      "existing_eligible": 489,
+      "annotation_matched": 0
+    },
+    "G5_frame_level_alignment": {
+      "result": "BLOCKED",
+      "episodes_tested": 0
+    },
+    "G6_annotation_loader": {
+      "result": "BLOCKED",
+      "loader_modified": false
+    },
+    "G7_r1_regression": {
+      "result": "PASS",
+      "existing_tests_passed": 24,
+      "existing_tests_failed": 0,
+      "r1_5_tests_skipped_until_official_staging": 7
+    }
+  },
+  "episode_mapping": {
+    "old_episodes": 507,
+    "new_episodes": null,
+    "exact_matches": 0,
+    "mismatches": null,
+    "blocked": 507,
+    "method": "SHA-256 of float64 action bytes plus frame_index/timestamp identity fingerprint; no index-only assumptions"
+  },
+  "arm_only_mapping": {
+    "existing_eligible": 489,
+    "annotation_matched": 0,
+    "missing": null,
+    "blocked": 489
+  },
+  "ready_for_r2": false,
+  "cleanup_performed": false,
+  "reason": "This is the prompt-defined CONDITIONAL case: an official annotation update is confirmed, but its official endpoint is broken and no official bytes can be acquired."
+}

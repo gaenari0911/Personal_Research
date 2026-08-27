@@ -1,0 +1,39 @@
+# Local agent and test state
+.agents/
+.codex/
+.gitdata/
+.pytest_cache/
+**/__pycache__/
+*.py[cod]
+
+# External repositories and local runtime environments
+external/
+.venv/
+venv/
+
+# Large generated model/runtime artifacts
+checkpoints/
+logs/
+downloads/
+analysis/stage_b/representations/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+
+# Datasets and binary media are stored outside Git
+*.hdf5
+*.h5
+*.mp4
+*.avi
+*.mov
+*.zip
+
+# Local operational prompt
+research.txt
+
+# Temporary/partial outputs
+*.stage-a-part
+*.stage-b-part
+*.tmp
+*.swp

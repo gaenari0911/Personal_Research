@@ -1,0 +1,156 @@
+{
+  "schema_version": "stage-a-v1",
+  "status": "PASS",
+  "critical_failures": [],
+  "checks": {
+    "project_and_artifacts": {
+      "pass": true,
+      "missing": []
+    },
+    "config_parse": {
+      "pass": true,
+      "schema": "stage-a-v1"
+    },
+    "splits": {
+      "pass": true,
+      "episodes": 914,
+      "train": 734,
+      "val": 85,
+      "test": 95
+    },
+    "source_data_readable": {
+      "pass": true,
+      "checked": 914,
+      "errors": []
+    },
+    "pilot_clip_cache": {
+      "pass": true,
+      "valid": 20,
+      "errors": []
+    },
+    "python_environment": {
+      "pass": true,
+      "executable": "/home/itaein/.conda/envs/egodex-box/bin/python",
+      "packages": {
+        "torch": "2.5.1+cu124",
+        "transformers": "4.46.3",
+        "cv2": "5.0.0",
+        "h5py": "3.16.0",
+        "numpy": "2.2.6",
+        "PIL": "11.0.0",
+        "yaml": "6.0.3"
+      },
+      "torch_cuda_build": "12.4",
+      "login_node_cuda_used": false
+    },
+    "storage_and_write": {
+      "pass": true,
+      "ssd_free_bytes": 505972903936,
+      "workspace_free_bytes": 101337632768,
+      "write_probes": {
+        "/home/itaein/Personal_Research/analysis": true,
+        "/home/itaein/Personal_Research/logs/stage_a": true,
+        "/home/itaein/Personal_Research/checkpoints/stage_a": true,
+        "/ssd1/itaein/datasets/RoboCerebra/r4_clip_cache": true
+      }
+    },
+    "mail_upstream": {
+      "pass": true,
+      "status": "",
+      "commit": "a8012a0018ce2e5e26adff3bb3336190be2595ea"
+    },
+    "variant_and_common_init": {
+      "pass": true,
+      "variant_hashes": {
+        "B0": "aeffa23a4387256da39a517eb38c06197eb7302d65814dacdfe90cdaef511dcd",
+        "B1": "aeffa23a4387256da39a517eb38c06197eb7302d65814dacdfe90cdaef511dcd",
+        "B2": "aeffa23a4387256da39a517eb38c06197eb7302d65814dacdfe90cdaef511dcd",
+        "B3": "aeffa23a4387256da39a517eb38c06197eb7302d65814dacdfe90cdaef511dcd"
+      },
+      "common_hash": "aeffa23a4387256da39a517eb38c06197eb7302d65814dacdfe90cdaef511dcd",
+      "weight_continuation": false
+    },
+    "schedule_no_test_no_future_leakage": {
+      "pass": true,
+      "train_anchors": 46945,
+      "val_anchors": 5440,
+      "future_target_is_supervision_only": true
+    },
+    "objective_optimizer_scope": {
+      "pass": true,
+      "behavior_cloning": false,
+      "action_prediction": false,
+      "clip_in_optimizer": false,
+      "amp": false,
+      "test_evaluation": false
+    },
+    "output_isolation": {
+      "pass": true,
+      "paths": [
+        "/home/itaein/Personal_Research/analysis/stage_a_training_B0.json",
+        "/home/itaein/Personal_Research/analysis/stage_a_training_B1.json",
+        "/home/itaein/Personal_Research/analysis/stage_a_training_B2.json",
+        "/home/itaein/Personal_Research/analysis/stage_a_training_B3.json",
+        "/home/itaein/Personal_Research/checkpoints/stage_a/B0",
+        "/home/itaein/Personal_Research/checkpoints/stage_a/B1",
+        "/home/itaein/Personal_Research/checkpoints/stage_a/B2",
+        "/home/itaein/Personal_Research/checkpoints/stage_a/B3"
+      ],
+      "preexisting": []
+    },
+    "pbs_script": {
+      "pass": true,
+      "syntax_stderr": "",
+      "banned_structures": {
+        "input_call": false,
+        "read_prompt": false,
+        "shell_select": false,
+        "qsub": false,
+        "qdel": false,
+        "codex_cli": false
+      },
+      "smoke_success_to_full_control_flow": "B0/B1/B2/B3 smoke loop -> smoke-gate -> cache -> cache-gate -> budget -> B0/B1/B2/B3 full loop -> final gate",
+      "requested_gpus": 2,
+      "requested_cpus": 8,
+      "requested_host": "pleiades1",
+      "parallel_variant_pairs": [
+        [
+          "B0",
+          "B1"
+        ],
+        [
+          "B2",
+          "B3"
+        ]
+      ],
+      "interactive_steps": 0
+    },
+    "pbs_resources": {
+      "pass": true,
+      "old_job_100160_state": "F",
+      "queue": "pleiades1",
+      "queue_enabled": true,
+      "node_gpu_slots": 10,
+      "static_gpu_model": "UNKNOWN; runtime nvidia-smi is a mandatory gate",
+      "compatibility_evidence": "same queue completed frozen CLIP CUDA job 100099 with exit 0",
+      "requested_walltime": "72:00:00"
+    },
+    "full_cache_source_reachability": {
+      "pass": true,
+      "sample": "coffee_table/case10",
+      "http_status": 200
+    }
+  },
+  "research_sha256": "7014b4c7c73db995adf7d4ce496b44532e3fa2424542c4cb9247c156126aa7ea",
+  "source_hashes": {
+    "configs/stage_a_representation.yaml": "e14a6af1ad8ea167be687f394fc09a8a71e9ce128a99d57f9eada3dec0f0bf6b",
+    "src/robocerebra_memory/stage_a.py": "bd7c65cf63f7d4e15ba0c1f0de5dbbb728e738dac08f1bb00d638259215fdd3e",
+    "tools/prepare_stage_a.py": "f6eaa16cf0b5320271fafcd5e2463502929b23a003111bfb1564dc67ddad15a1",
+    "tools/cache_stage_a_features.py": "32f737ccbd0e446cb7dd2d87945f39627875d408c35680b93439eae01613a4c1",
+    "tools/train_stage_a.py": "200b0372226d02621de1af3e629afc9939b3bc79c171be85b27a3beafdcf71b8",
+    "tools/stage_a_control.py": "12494a27b23be65597fe49649453f97bbcfe787cba35e2073e6acb75c1db9cd5",
+    "jobs/stage_a_smoke_and_representation.pbs": "32ca375c44b00b1405db3a9c23cd468acc6e23b5bf9a5d3dc77b93b87b645636"
+  },
+  "qsub_allowed": true,
+  "qsub_count_before_submission": 0
+}

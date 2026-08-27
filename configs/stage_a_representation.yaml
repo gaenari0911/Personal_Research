@@ -1,0 +1,98 @@
+stage: stage_a
+schema_version: stage-a-v1
+seed: 42
+
+dataset:
+  episode_index: analysis/robocerebra_memory_episode_index.json
+  train_split: splits/robocerebra_memory_train.json
+  val_split: splits/robocerebra_memory_val.json
+  forbidden_test_split: splits/robocerebra_memory_test.json
+  train_trajectories: 734
+  val_trajectories: 85
+  test_trajectories: 95
+  schedule: analysis/stage_a_schedule.json
+
+features:
+  checkpoint: openai/clip-vit-base-patch32
+  model_cache: /ssd1/itaein/datasets/RoboCerebra/model_cache/r4_clip
+  cache_root: /ssd1/itaein/datasets/RoboCerebra/r4_clip_cache
+  frozen: true
+  normalized: true
+  dtype: float16
+  dimension: 512
+  image_batch_size: 64
+  image_t_equals_timestep: true
+  exclude_extra_final_image: true
+  reuse_valid_pilot_cache: true
+  download_revision: 5d2e1e361bf65aabbe4d18179515f5a10936cc96
+
+model:
+  variants: [B0, B1, B2, B3]
+  d_model: 128
+  n_layer: 16
+  d_state: 16
+  d_conv: 4
+  expand: 2
+  B0_window: 5
+  persistent_full_sequence: true
+  gradient_checkpointing: true
+  automatic_state_detach: false
+  amp: false
+  training_dtype: float32
+
+objective:
+  name: one_way_in_batch_InfoNCE
+  future_horizon: 20
+  temperature: 0.07
+  anchors_per_trajectory_cap: 64
+  minimum_anchors_per_trajectory: 8
+  smoke_anchors: 8
+  behavior_cloning: false
+  action_prediction: false
+
+optimizer:
+  name: AdamW
+  learning_rate: 0.0001
+  weight_decay: 0.01
+  gradient_clip_norm: 1.0
+  scheduler: none
+
+training:
+  candidate_epochs: [3, 2, 1]
+  checkpoint_interval_updates: 50
+  validation_each_epoch: true
+  checkpoint_selection: lowest_validation_InfoNCE
+  common_initialization: checkpoints/stage_a/common_init.pt
+  resume_capable: true
+  first_integrated_run_policy: clean_common_init
+  final_probe: false
+  test_evaluation: false
+
+budget:
+  requested_walltime: "72:00:00"
+  requested_walltime_seconds: 259200
+  safety_reserve_fraction: 0.25
+  fixed_overhead_seconds: 900
+  smoke_scaling_extra_fraction: 0.15
+
+pbs:
+  queue: pleiades1
+  host: pleiades1
+  gpu_count: 2
+  cpu_count: 8
+  target_gpu: NVIDIA RTX 3090 24GB class
+  runtime_gpu_verification: nvidia-smi
+  scheduler_log: logs/stage_a/scheduler.log
+
+outputs:
+  checkpoint_root: checkpoints/stage_a
+  log_root: logs/stage_a
+  analysis_root: analysis
+  master_log: logs/stage_a/integrated.log
+  status: analysis/stage_a_status.json
+  smoke_summary: analysis/stage_a_smoke_summary.json
+  cache_audit: analysis/stage_a_clip_cache_audit.json
+  compute_plan: analysis/stage_a_compute_plan.json
+  fairness_audit: analysis/stage_a_fairness_audit.json
+  training_summary: analysis/stage_a_training_summary.json
+  gate: analysis/stage_a_gate.json

@@ -1,0 +1,35 @@
+{
+  "task": "WashFruitColander",
+  "dataset_gate": "FAIL",
+  "total_episodes": 507,
+  "eligible_arm_only_episodes": 489,
+  "action_adapter": "PASS",
+  "camera_adapter": "PASS",
+  "alignment": "PASS",
+  "loader": "FAIL",
+  "tests": "PASS",
+  "cleanup_authorized_by_gate": false,
+  "libero_deleted": false,
+  "calvin_debug_deleted": false,
+  "gate_checks": {
+    "G1_dataset": {
+      "result": "FAIL",
+      "reason": "The checksum-valid v2.1 archive is readable, but it lacks the official 2026 per-frame subtask annotation update. The current official RoboCasa Box URL returns HTTP 404; the verified NVIDIA alternate is the pre-update archive."
+    },
+    "G2_eligible_at_least_400": {"result": "PASS", "value": 489},
+    "G3_action_ordering": {"result": "PASS", "extraction": "LeRobot action[5:12]"},
+    "G4_base_control_unused": {"result": "PASS", "selection": "base exactly zero and control_mode exactly constant -1"},
+    "G5_two_cameras": {"result": "PASS", "videos_checked": 1521, "metadata_mismatches": 0},
+    "G6_alignment": {"result": "PASS", "confidence": "HIGH", "mapping": "obs[t] -> action[t]", "shift": 0},
+    "G7_loader": {
+      "result": "FAIL",
+      "reason": "Low-dimensional, camera, action and chunk loading pass, but required raw subtask_idx/subtask/subtask_name/subtask_stage streams do not exist in the acquired archive."
+    },
+    "G8_horizon_10": {"result": "PASS"},
+    "G9_boundary_safety": {"result": "PASS", "cross_episode_leakage": false},
+    "G10_tests": {"result": "PASS", "r1_tests": 14, "all_project_tests_run": 24, "failed": 0},
+    "G11_corruption": {"result": "PASS", "corrupt_episodes": 0, "nan_or_inf": 0}
+  },
+  "critical_failure": "Annotation-bearing official archive cannot currently be acquired from the official RoboCasa endpoint, and the available verified alternate predates the annotation update.",
+  "r2_ready": false
+}

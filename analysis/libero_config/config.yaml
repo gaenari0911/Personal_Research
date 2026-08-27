@@ -1,0 +1,5 @@
+benchmark_root: /home/itaein/Personal_Research/external/LIBERO/libero/libero
+bddl_files: /home/itaein/Personal_Research/external/LIBERO/libero/libero/bddl_files
+init_states: /home/itaein/Personal_Research/external/LIBERO/libero/libero/init_files
+datasets: /ssd1/itaein/datasets/LIBERO
+assets: /home/itaein/Personal_Research/external/LIBERO/libero/libero/assets

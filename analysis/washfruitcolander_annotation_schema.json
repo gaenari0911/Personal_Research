@@ -1,0 +1,64 @@
+{
+  "task": "WashFruitColander",
+  "result": "BLOCKED_OFFICIAL_ENDPOINT_404",
+  "latest_official_archive_accessed": false,
+  "latest_schema_inspected": false,
+  "previous_dataset": {
+    "source": "NVIDIA verified reference distribution",
+    "codebase_version": "v2.1",
+    "episodes": 507,
+    "frames": 518903,
+    "fields": {
+      "annotation.human.task_description": {
+        "present": true,
+        "dtype": "int64",
+        "shape": [1],
+        "example_value": 0,
+        "unique_count": 157
+      },
+      "annotation.human.task_name": {
+        "present": true,
+        "dtype": "int64",
+        "shape": [1],
+        "example_value": 157,
+        "unique_count": 1
+      }
+    }
+  },
+  "required_latest_fields": {
+    "annotation.human.subtask": {
+      "officially_announced_semantics": "natural-language subtask instruction",
+      "presence": "UNKNOWN_BYTES_UNAVAILABLE",
+      "dtype": null,
+      "shape": null,
+      "example_value": null,
+      "unique_count": null
+    },
+    "annotation.human.subtask_name": {
+      "officially_announced_semantics": "atomic-skill name",
+      "presence": "UNKNOWN_BYTES_UNAVAILABLE",
+      "dtype": null,
+      "shape": null,
+      "example_value": null,
+      "unique_count": null
+    },
+    "annotation.human.subtask_stage": {
+      "officially_announced_semantics": "stage such as pick/place/navigate",
+      "presence": "UNKNOWN_BYTES_UNAVAILABLE",
+      "dtype": null,
+      "shape": null,
+      "example_value": null,
+      "unique_count": null
+    },
+    "subtask_idx": {
+      "officially_announced_semantics": "per-frame subtask index",
+      "presence": "UNKNOWN_BYTES_UNAVAILABLE",
+      "dtype": null,
+      "shape": null,
+      "example_value": null,
+      "unique_count": null
+    }
+  },
+  "schema_gate": "NOT_RUN",
+  "reason": "Neither the Box share nor the direct tar endpoint exposes bytes or remote parquet metadata."
+}

@@ -1,0 +1,138 @@
+{
+  "schema_version": "r3-v1",
+  "backend": "torch_reference_mamba1_selective_scan",
+  "common": {
+    "external_rgb_feature": [
+      "batch",
+      "time",
+      512
+    ],
+    "robot_qpos": [
+      "batch",
+      "time",
+      9
+    ],
+    "language_feature": [
+      "batch",
+      "time",
+      512
+    ],
+    "instantaneous_r_t": [
+      "batch",
+      "time",
+      128
+    ],
+    "temporal_z_t": [
+      "batch",
+      "time",
+      128
+    ],
+    "future_prediction": [
+      "batch",
+      "time",
+      512
+    ]
+  },
+  "real_smoke_outputs": {
+    "B0": {
+      "instantaneous": [
+        1,
+        4,
+        128
+      ],
+      "temporal": [
+        1,
+        4,
+        128
+      ],
+      "future_prediction": [
+        1,
+        4,
+        512
+      ],
+      "persistent": false,
+      "state_returned": false,
+      "episode_reset_count": 0,
+      "state_steps": null,
+      "window_lengths": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "B1": {
+      "instantaneous": [
+        1,
+        4,
+        128
+      ],
+      "temporal": [
+        1,
+        4,
+        128
+      ],
+      "future_prediction": [
+        1,
+        4,
+        512
+      ],
+      "persistent": true,
+      "state_returned": true,
+      "episode_reset_count": 1,
+      "state_steps": 4,
+      "window_lengths": []
+    },
+    "B2": {
+      "instantaneous": [
+        1,
+        4,
+        128
+      ],
+      "temporal": [
+        1,
+        4,
+        128
+      ],
+      "future_prediction": [
+        1,
+        4,
+        512
+      ],
+      "persistent": true,
+      "state_returned": true,
+      "episode_reset_count": 1,
+      "state_steps": 4,
+      "window_lengths": []
+    },
+    "B3": {
+      "instantaneous": [
+        1,
+        4,
+        128
+      ],
+      "temporal": [
+        1,
+        4,
+        128
+      ],
+      "future_prediction": [
+        1,
+        4,
+        512
+      ],
+      "persistent": true,
+      "state_returned": true,
+      "episode_reset_count": 1,
+      "state_steps": 4,
+      "window_lengths": []
+    }
+  },
+  "common_initialization_sha256": {
+    "B0": "e99531cf546add67b66cf4d0632898e34a9881078f7b56625cee1172883ad9ff",
+    "B1": "e99531cf546add67b66cf4d0632898e34a9881078f7b56625cee1172883ad9ff",
+    "B2": "e99531cf546add67b66cf4d0632898e34a9881078f7b56625cee1172883ad9ff",
+    "B3": "e99531cf546add67b66cf4d0632898e34a9881078f7b56625cee1172883ad9ff"
+  },
+  "all_initializations_identical": true
+}

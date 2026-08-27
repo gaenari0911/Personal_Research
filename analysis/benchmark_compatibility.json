@@ -1,0 +1,315 @@
+{
+  "schema_version": "1.0",
+  "audit_date": "2026-08-24",
+  "decision_status": "recommendation_only_waiting_for_human_approval",
+  "primary_recommendation": "CALVIN",
+  "ranking": [
+    "CALVIN",
+    "RoboCasa365",
+    "FurnitureBench"
+  ],
+  "rubric": {
+    "long_horizon_semantic_structure": 30,
+    "mail_compatibility": 25,
+    "semantic_annotation_quality": 15,
+    "evaluation_quality": 10,
+    "dataset_practicality": 10,
+    "experimental_cleanliness": 10
+  },
+  "mail_reference": {
+    "source_root": "/home/itaein/Personal_Research/external/MaIL",
+    "action": {
+      "dimension": 7,
+      "semantics": "Cartesian xyz + 3D rotation + gripper"
+    },
+    "cameras": [
+      {
+        "name": "agentview_rgb",
+        "shape": [3, 128, 128]
+      },
+      {
+        "name": "eye_in_hand_rgb",
+        "shape": [3, 128, 128]
+      }
+    ],
+    "language": "one 512D task embedding projected to 256D and prepended to visual tokens",
+    "backbone": "Mamba MixerModel, d_model=128",
+    "observation_window": 5,
+    "training_action_horizon": 10,
+    "inference_action_horizon": 10,
+    "objective": "behavior cloning with MSE action loss",
+    "important_caveat": "released MaIL runs Mamba on finite windows; episode-persistent state is a research modification, not an existing baseline property",
+    "source_files": [
+      "external/MaIL/config/benchmark_libero10.yaml",
+      "external/MaIL/config/agents/goal_bc_mamba_dec.yaml",
+      "external/MaIL/dataset/multi_task_dataset_goal.py",
+      "external/MaIL/agents/models/bc/goal_bc_agent.py"
+    ]
+  },
+  "benchmarks": {
+    "CALVIN": {
+      "rank": 1,
+      "score": {
+        "long_horizon_semantic_structure": 27,
+        "mail_compatibility": 25,
+        "semantic_annotation_quality": 9,
+        "evaluation_quality": 10,
+        "dataset_practicality": 6,
+        "experimental_cleanliness": 9,
+        "total": 86
+      },
+      "adaptation_cost_1_to_5": {
+        "action": 5,
+        "camera": 5,
+        "language": 4,
+        "temporal_structure": 4,
+        "evaluation": 4
+      },
+      "action": {
+        "nominal_dimension": 7,
+        "effective_dimension": 7,
+        "rollout_required_dimension": 7,
+        "recommended_key": "rel_actions",
+        "semantics": "relative TCP position xyz + relative Euler xyz + binary gripper",
+        "frequency_hz": 30
+      },
+      "cameras": {
+        "recommended": ["rgb_static", "rgb_gripper"],
+        "native_shapes": [[200, 200, 3], [84, 84, 3]],
+        "mail_adapter": "resize both views to 128x128 and map names only"
+      },
+      "language": {
+        "raw_text_available": true,
+        "task_ids_available": true,
+        "segment_indices_available": true,
+        "official_full_chain_instruction": false,
+        "official_next_instruction_provider": true
+      },
+      "continuity": {
+        "environment_reset_before_chain": true,
+        "environment_reset_between_stages": false,
+        "policy_reset_between_stages_in_official_evaluator": true,
+        "chain_length": 5,
+        "stage_step_cap": 360,
+        "stage_time_cap_seconds": 12.0
+      },
+      "training_data": {
+        "format": "one npz file per interaction timestep plus auto_lang_ann.npy segment metadata",
+        "hours_per_environment": 6,
+        "total_hours": 24,
+        "contains_continuous_play": true,
+        "contains_preassembled_five_task_compound_demonstrations": false,
+        "sizes": {
+          "D_to_D_gb": 166,
+          "ABC_to_D_gb": 517,
+          "ABCD_to_D_gb": 656,
+          "debug_gb": 1.3
+        }
+      },
+      "boundaries": "official task-oracle success event during rollout; offline language segments provide [start,end] indices but not a packaged five-stage compound label",
+      "official": [
+        "1000 valid five-task chains",
+        "single simulator episode per chain with no environment reset between tasks",
+        "external instruction switch after oracle success",
+        "model.reset() at every subtask",
+        "7D relative or absolute Cartesian control and two RGB views"
+      ],
+      "our_proposed_modification": [
+        "retain policy/Mamba memory across stage boundaries by removing per-subtask model.reset()",
+        "run a fixed three-chain pilot selected through the official transition validator",
+        "for FULL conditions, concatenate five official task utterances into one compound instruction",
+        "log official task-oracle success events as semantic transitions"
+      ],
+      "compound_instruction_feasibility": {
+        "evaluation_only_possible_without_new_demonstrations": true,
+        "supervised_training_directly_supported_by_official_data": false,
+        "new_data_or_mining_needed_for_full_compound_bc": true,
+        "benchmark_semantics_changed": "moderate; environment, task oracle, actions, and chain validity remain official, but prompt scheduling is custom"
+      },
+      "mail_fairness": "YES — architecture-preserving adapter only",
+      "primary_risk": "The clean persistent-state test uses externally switched stage instructions; a true one-shot full-instruction BC condition needs relabelled/mined or newly generated chain demonstrations.",
+      "sources": [
+        "https://github.com/mees/calvin",
+        "https://github.com/mees/calvin/blob/main/dataset/README.md",
+        "https://github.com/mees/calvin/blob/main/calvin_models/calvin_agent/evaluation/evaluate_policy.py",
+        "https://github.com/mees/calvin/blob/main/calvin_models/calvin_agent/evaluation/multistep_sequences.py",
+        "https://calvin.cs.uni-freiburg.de/",
+        "https://arxiv.org/abs/2112.03227"
+      ]
+    },
+    "RoboCasa365": {
+      "rank": 2,
+      "score": {
+        "long_horizon_semantic_structure": 29,
+        "mail_compatibility": 12,
+        "semantic_annotation_quality": 15,
+        "evaluation_quality": 10,
+        "dataset_practicality": 9,
+        "experimental_cleanliness": 4,
+        "total": 79
+      },
+      "adaptation_cost_1_to_5": {
+        "action": 2,
+        "camera": 4,
+        "language": 5,
+        "temporal_structure": 5,
+        "evaluation": 4
+      },
+      "action": {
+        "nominal_dimension": 12,
+        "effective_manipulation_dimension": 7,
+        "rollout_required_dimension": 12,
+        "slices": {
+          "end_effector_position": [0, 3],
+          "end_effector_rotation": [3, 6],
+          "gripper_close": [6, 7],
+          "base_motion": [7, 11],
+          "control_mode": [11, 12]
+        },
+        "important_caveat": "A seven-dimensional training projection is valid only after per-episode base-motion and control-mode inspection; the environment still expects the full hybrid action dictionary for rollout."
+      },
+      "cameras": {
+        "native": ["robot0_agentview_left", "robot0_agentview_right", "robot0_eye_in_hand"],
+        "dataset_resolution": [256, 256],
+        "recommended_mail_pair": ["robot0_agentview_right", "robot0_eye_in_hand"],
+        "modification": "drop the left third-person view and resize to 128x128"
+      },
+      "language": {
+        "full_episode_instruction": true,
+        "per_frame_subtask_instruction": true
+      },
+      "annotations": {
+        "availability": "all target composite task datasets",
+        "release_date": "2026-07-07",
+        "release_version_context": "post-v1.0.1 dataset update; the official announcement does not assign a separate semantic-annotation version number",
+        "timestep_aligned_fields": ["subtask index", "atomic-skill name", "stage", "natural-language instruction"],
+        "format_certainty": "semantic fields are officially documented as per-frame; exact serialized column names require manifest/data inspection after selection"
+      },
+      "target_examples": [
+        {"task": "SteamInMicrowave", "official_subtasks": 6, "horizon_seconds": 45, "navigation_listed": true},
+        {"task": "StoreLeftoversInBowl", "official_subtasks": 5, "horizon_seconds": 58, "navigation_listed": true},
+        {"task": "ArrangeBreadBasket", "official_subtasks": 5, "horizon_seconds": 83, "navigation_listed": true},
+        {"task": "WaffleReheat", "official_subtasks": 4, "horizon_seconds": 86, "navigation_listed": true},
+        {"task": "WashFruitColander", "official_subtasks": 4, "horizon_seconds": 60, "navigation_listed": false}
+      ],
+      "training_data": {
+        "target_human_tasks": 50,
+        "target_composite_tasks": 32,
+        "target_demos_per_task": 500,
+        "target_hours": 193,
+        "all_hours": "2200+",
+        "task_specific_download": true,
+        "official_byte_size": "not published",
+        "environment_assets_gb": "approximately 10"
+      },
+      "official": [
+        "full composite demonstrations and full-task language",
+        "per-frame annotations for target composites",
+        "three camera videos",
+        "12D PandaOmron hybrid mobile manipulation actions",
+        "task-specific dataset downloader and simulator success checks"
+      ],
+      "our_proposed_modification": [
+        "use right third-person plus eye-in-hand views",
+        "resize to 128x128",
+        "consider 7D arm projection only after verifying base_motion approximately zero and arm-active control_mode throughout selected episodes"
+      ],
+      "pure_manipulation_decision": "One official 4-subtask target task, WashFruitColander, omits Navigation from Skills Involved. The other inspected 4-6-subtask target tasks list Navigation. This is insufficient evidence for a three-task pure-manipulation main suite.",
+      "mail_fairness": "QUESTIONABLE for mobile composites; MOSTLY for a verified arm-only subset",
+      "primary_risk": "The benchmark's strongest annotated long tasks are mobile-manipulation tasks, so base control can confound a semantic-memory comparison.",
+      "sources": [
+        "https://robocasa.ai/",
+        "https://robocasa.ai/docs/build/html/datasets/datasets_overview.html",
+        "https://github.com/robocasa/robocasa/blob/main/docs/datasets/using_datasets.md",
+        "https://github.com/robocasa/robocasa/blob/main/robocasa/utils/env_utils.py",
+        "https://github.com/robocasa/robocasa/blob/main/robocasa/environments/kitchen/composite/steaming_food/steam_in_microwave.py",
+        "https://github.com/robocasa/robocasa/blob/main/robocasa/environments/kitchen/composite/washing_fruits_and_vegetables/wash_fruit_colander.py",
+        "https://robocasa.ai/assets/robocasa365_iclr26.pdf"
+      ]
+    },
+    "FurnitureBench": {
+      "rank": 3,
+      "score": {
+        "long_horizon_semantic_structure": 26,
+        "mail_compatibility": 15,
+        "semantic_annotation_quality": 7,
+        "evaluation_quality": 8,
+        "dataset_practicality": 5,
+        "experimental_cleanliness": 8,
+        "total": 69
+      },
+      "adaptation_cost_1_to_5": {
+        "action": 3,
+        "camera": 5,
+        "language": 1,
+        "temporal_structure": 5,
+        "evaluation": 3
+      },
+      "action": {
+        "nominal_dimension": 8,
+        "effective_dimension": 8,
+        "rollout_required_dimension": 8,
+        "semantics": "delta EE position xyz + delta quaternion xyzw + gripper",
+        "frequency_hz": 10
+      },
+      "cameras": {
+        "recommended": ["color_image1 wrist", "color_image2 front"],
+        "shape": [224, 224, 3],
+        "mail_adapter": "resize to 128x128 and rename"
+      },
+      "annotations": {
+        "skill_completion_flags": true,
+        "part_assembly_rewards": true,
+        "natural_language_full_task": false,
+        "natural_language_subtask": false
+      },
+      "continuity": "full demonstrations are continuous assembly episodes",
+      "dataset": {
+        "successful_demonstrations": 5100,
+        "hours": 219.6,
+        "raw_size_gb": 1179,
+        "task_specific_download": true,
+        "smallest_published_furniture_randomness_bucket_gb": 11
+      },
+      "evaluation": "real FurnitureBench and FurnitureSim are available; image simulation supports wrist/front views and an official full-assembly API",
+      "official": [
+        "continuous full-assembly trajectories",
+        "skill completion flags",
+        "two-view image benchmark",
+        "8D quaternion action",
+        "no language annotations"
+      ],
+      "our_proposed_modification": [
+        "author full-task and subtask language labels",
+        "map completion pulses into stage intervals",
+        "change MaIL action head and rotation target from 3D to quaternion 4D"
+      ],
+      "mail_fairness": "QUESTIONABLE — substantial action/protocol modification",
+      "primary_risk": "Any language-conditioned semantic-transition result depends on our newly authored ontology rather than an official benchmark annotation.",
+      "sources": [
+        "https://clvrai.github.io/furniture-bench/",
+        "https://clvrai.github.io/furniture-bench/docs/tutorials/dataset.html",
+        "https://clvrai.github.io/furniture-bench/docs/tutorials/furniture_bench.html",
+        "https://clvrai.github.io/furniture-bench/docs/tutorials/furniture_sim.html",
+        "https://arxiv.org/abs/2305.12821"
+      ]
+    }
+  },
+  "additional_candidates": {
+    "status": "none_added",
+    "reason": "No additional official candidate inspected from public documentation simultaneously improved on CALVIN's 7D/two-view compatibility and RoboCasa365's full-instruction/per-frame semantics while meeting continuous offline 4+ stage manipulation and reproducible rollout requirements. Adding a weaker candidate would not change the top-three decision."
+  },
+  "decision_rule": {
+    "selected": "CALVIN",
+    "rationale": "RoboCasa365 fails the three-task arm-only verification gate at audit time; CALVIN passes the continuous five-stage and exact MaIL action/camera compatibility gates; FurnitureBench remains fallback only.",
+    "next_gate": "human benchmark approval before any dataset download or LIBERO deletion"
+  },
+  "safety_attestation": {
+    "large_dataset_downloaded": false,
+    "libero_deleted": false,
+    "model_implemented": false,
+    "model_trained": false,
+    "gpu_job_submitted": false,
+    "git_pushed": false
+  }
+}

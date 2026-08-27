@@ -1,0 +1,18 @@
+#!/bin/bash
+#PBS -N r4_train_full
+#PBS -q pleiades3
+#PBS -l select=1:ncpus=4:ngpus=1
+#PBS -l walltime=24:00:00
+#PBS -j oe
+#PBS -o /home/itaein/Personal_Research/logs/r4/full_scheduler.log
+
+set -euo pipefail
+cd /home/itaein/Personal_Research
+export PYTHONPATH=/home/itaein/Personal_Research/src
+exec >logs/r4/training_full.log 2>&1
+/home/itaein/.conda/envs/egodex-box/bin/python tools/train_r4_pilot.py \
+  --variants B0 B1 B2 B3 \
+  --updates 16 \
+  --device cuda \
+  --output analysis/r4_training_summary.json \
+  --checkpoint-root checkpoints/r4

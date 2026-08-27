@@ -1,0 +1,78 @@
+{
+  "schema_version": "stage-b-evaluation-v1",
+  "variant": "B0",
+  "split": "test",
+  "metrics": {
+    "current": {
+      "trajectory_count": 95,
+      "sample_count": 20921,
+      "recall_at_1": 0.26333597528486474,
+      "recall_at_1_ci_low": 0.24419261815868068,
+      "recall_at_1_ci_high": 0.28465052398056023,
+      "mrr": 0.47294062342386056,
+      "mrr_ci_low": 0.45361461681310494,
+      "mrr_ci_high": 0.4934672337325181,
+      "aggregation": "trajectory_macro_cell_step_hierarchy",
+      "bootstrap_unit": "trajectory",
+      "bootstrap_resamples": 2000,
+      "bootstrap_seed": 42
+    },
+    "prev1": {
+      "trajectory_count": 95,
+      "sample_count": 18537,
+      "recall_at_1": 0.2913879899166553,
+      "recall_at_1_ci_low": 0.2721707017636881,
+      "recall_at_1_ci_high": 0.31331102135124694,
+      "mrr": 0.49660648666231133,
+      "mrr_ci_low": 0.47854305796789304,
+      "mrr_ci_high": 0.5162487535863698,
+      "aggregation": "trajectory_macro_cell_step_hierarchy",
+      "bootstrap_unit": "trajectory",
+      "bootstrap_resamples": 2000,
+      "bootstrap_seed": 42
+    },
+    "prev2": {
+      "trajectory_count": 95,
+      "sample_count": 16267,
+      "recall_at_1": 0.20619613188280259,
+      "recall_at_1_ci_low": 0.1880743543019997,
+      "recall_at_1_ci_high": 0.22514369545642138,
+      "mrr": 0.4135760554406488,
+      "mrr_ci_low": 0.39758840406720125,
+      "mrr_ci_high": 0.4305111892409415,
+      "aggregation": "trajectory_macro_cell_step_hierarchy",
+      "bootstrap_unit": "trajectory",
+      "bootstrap_resamples": 2000,
+      "bootstrap_seed": 42
+    },
+    "prev3": {
+      "trajectory_count": 95,
+      "sample_count": 14109,
+      "recall_at_1": 0.1810592045972685,
+      "recall_at_1_ci_low": 0.15953684893323047,
+      "recall_at_1_ci_high": 0.20234972392634523,
+      "mrr": 0.3964702700300151,
+      "mrr_ci_low": 0.3748965956070676,
+      "mrr_ci_high": 0.41799042994921365,
+      "aggregation": "trajectory_macro_cell_step_hierarchy",
+      "bootstrap_unit": "trajectory",
+      "bootstrap_resamples": 2000,
+      "bootstrap_seed": 42
+    }
+  },
+  "interpretation_warning": null,
+  "test_split_evaluated": true,
+  "provenance": {
+    "probe_checkpoint": "/home/itaein/Personal_Research/checkpoints/stage_b/B0/selected_probes.pt",
+    "probe_checkpoint_sha256": "075d2cef908ff2b2fb7c8105e15220254fe56bd314115affe9605bc111c55e61",
+    "stage_a_checkpoint": {
+      "path": "/home/itaein/Personal_Research/checkpoints/stage_a/B0/best_val.pt",
+      "variant": "B0",
+      "global_update": 734,
+      "completed_epoch": 1,
+      "best_val": 3.3570817891289204,
+      "state_dict_sha256": "d022e4b5afd790762fd2ef93fe65f0c4b7a75fbfcd9ef2d1efd8bd6eed509f71"
+    },
+    "sampling_sha256": "900795b166e3f512aff217d95783ead7a0abc901d01e049959daaa2c251e27ed"
+  }
+}

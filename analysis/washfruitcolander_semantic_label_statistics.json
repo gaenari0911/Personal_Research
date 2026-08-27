@@ -1,0 +1,36 @@
+{
+  "task": "WashFruitColander",
+  "small_gate": "FAIL",
+  "full_processing_attempted": false,
+  "eligible_episodes": 489,
+  "processed_episodes": 0,
+  "valid_semantic_labels": 0,
+  "invalid_episodes": 0,
+  "unprocessed_due_small_gate": 489,
+  "acceptance_rate_percent": null,
+  "trainable_episode_count_gate": "NOT_RUN",
+  "small_validation": {
+    "episodes": [205, 379, 189, 341, 60],
+    "initial_state_reconstructions": 0,
+    "action_replays": 0,
+    "ordered_timelines": 0,
+    "final_successes": 0,
+    "spout_changed_over_0_1_rad": 1
+  },
+  "failure_reasons": {
+    "initial_state_failure": 5,
+    "official_contact_predicate_unavailable": 5,
+    "missing_s1": null,
+    "missing_s2": null,
+    "missing_s3": null,
+    "ordering_violation": null,
+    "replay_divergence": null
+  },
+  "stage_duration_statistics": {
+    "S1": null,
+    "S2": null,
+    "S3": null,
+    "S4": null
+  },
+  "reason": "The prompt forbids full 489 processing after SMALL_GATE failure."
+}

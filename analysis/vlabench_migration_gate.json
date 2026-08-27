@@ -1,0 +1,40 @@
+{
+  "audit": "R0-D Final VLABench 7D Multi-Stage Feasibility Audit",
+  "audit_date": "2026-08-24",
+  "decision": "REJECT",
+  "stop_new_benchmark_search": true,
+  "gate_checks": {
+    "three_tasks_with_4_to_6_genuine_stages": false,
+    "continuous_no_reset_execution": true,
+    "repeated_demonstrations": true,
+    "full_natural_language": true,
+    "seven_dimensional_policy_action": true,
+    "reproducible_boundary_level_1_to_3": false,
+    "rollout_success_evaluation": true,
+    "no_large_manual_labeling": false,
+    "exact_replay_from_released_data": false,
+    "mail_core_preserved": true
+  },
+  "hard_blockers": [
+    "The released dataset has no skill, stage, transition, predicate, or boundary field.",
+    "All three data-backed four-stage candidates are low-dependency, order-insensitive classification placements.",
+    "The semantically strong heat_food and take_chemistry_experiment tasks have no released composite demonstrations.",
+    "Several official LeRobot surface names do not match upstream registrations, and exact replay lacks initial state/configuration."
+  ],
+  "recommendation": {
+    "option": "C",
+    "label": "mixed benchmark design",
+    "plan": "Keep LIBERO for the stable 7D MaIL training/regression baseline and use the already-audited RoboCasa WashFruitColander subset as the multi-stage evaluation/pilot component."
+  },
+  "storage": {
+    "target": "/ssd1/itaein/datasets/VLABench/",
+    "available_bytes": 513727045632,
+    "available_gib": 478.46,
+    "official_composite_dataset_size": "20 GB",
+    "official_assets_size": "not published",
+    "existing_libero_bytes": 13730613000,
+    "existing_calvin_bytes": 2615026055,
+    "download_authorized": false,
+    "migration_performed": false
+  }
+}

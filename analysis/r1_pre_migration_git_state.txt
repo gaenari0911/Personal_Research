@@ -1,0 +1,22 @@
+Task R1 pre-migration Git state
+Captured: 2026-08-24 Asia/Seoul
+
+Project root: /home/itaein/Personal_Research
+git status: not a Git worktree (no root .git directory)
+git rev-parse HEAD: unavailable
+git branch --show-current: unavailable
+
+RoboCasa repository: /home/itaein/Personal_Research/external/robocasa
+origin: https://github.com/robocasa/robocasa.git
+branch: main
+HEAD: a07e365c958c4216cd6bbd5f30b47f09a65c6f00
+status: clean
+remote main at capture: a07e365c958c4216cd6bbd5f30b47f09a65c6f00
+
+MaIL repository: /home/itaein/Personal_Research/external/MaIL
+branch: main
+HEAD: a8012a0018ce2e5e26adff3bb3336190be2595ea
+status: clean
+
+Policy: existing changes, if later observed, will be preserved. No reset and no
+git push are authorized for Task R1.

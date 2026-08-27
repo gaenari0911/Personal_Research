@@ -1,0 +1,69 @@
+{
+  "audit_date": "2026-08-24",
+  "scope": {
+    "official_lerobot_composite_surface_count": 22,
+    "upstream_composite_registration_count": 36,
+    "surface_upstream_union_name_count": 41,
+    "upstream_commit": "cf588fe60c0c7282174fe979f5913170cfe69017",
+    "dataset": "VLABench/vlabench_composite_ft_lerobot_video",
+    "official_episodes": 5977,
+    "official_frames": 2539771,
+    "metadata_task_instruction_variants": 167,
+    "sampled_episode_parquets": 500,
+    "sample_fraction_of_episodes": 0.08365
+  },
+  "stage_definition": {
+    "rule": "A stage is a language-describable world-state transition. Reach, grasp, lift, move and release for one transfer are merged. Waiting, reset and camera motion are excluded.",
+    "accepted_boundary_levels": [1, 2, 3],
+    "level_1": "official per-frame skill/subtask/stage ID",
+    "level_2": "official transition frame or timestamp metadata",
+    "level_3": "deterministic simulator predicate or state rule replayable per frame",
+    "level_4": "high-confidence offline reconstruction",
+    "level_5": "manual annotation"
+  },
+  "counts": {
+    "semantic_4_stage_surface_tasks": 6,
+    "semantic_5_stage_surface_tasks": 0,
+    "semantic_6_stage_surface_tasks": 0,
+    "semantic_4_stage_upstream_tasks": 9,
+    "semantic_5_stage_upstream_tasks": 1,
+    "semantic_6_stage_upstream_tasks": 0,
+    "fully_qualified_tasks": 0
+  },
+  "four_stage_tasks": [
+    {"task": "cluster_billiards", "data": true, "dependency": "LOW", "released_boundary_level": 5},
+    {"task": "cluster_book", "data": false, "dependency": "LOW", "released_boundary_level": 5},
+    {"task": "cluster_drink", "data": true, "dependency": "LOW", "released_boundary_level": 5},
+    {"task": "cluster_toy", "data": true, "dependency": "LOW", "released_boundary_level": 5},
+    {"task": "heat_food", "data": false, "dependency": "HIGH", "source_predicate_level": 3},
+    {"task": "take_chemistry_experiment", "data": false, "dependency": "HIGH", "source_predicate_level": 3}
+  ],
+  "released_schema_boundary_fields": [],
+  "released_schema_fields": [
+    "observation.images.image", "observation.images.second_image",
+    "observation.images.wrist_image", "observation.state.eef",
+    "observation.state.joint", "actions", "metadata.filepath", "timestamp",
+    "frame_index", "episode_index", "index", "task_index"
+  ],
+  "source_vs_data": {
+    "source_expert_skill_sequence": "The generator executes skills continuously in one environment and exposes an ordered Python list.",
+    "released_episode": "The list index and transition frame are not serialized; only observations/actions/task_index are retained.",
+    "conclusion": "Source knowledge is insufficient for automatic boundary labels without deterministic state replay or a new instrumented generation run."
+  },
+  "dataset_family_sample": {
+    "book_rearrange": {"n": 43, "median_frames": 480.0},
+    "cluster_billiards": {"n": 48, "median_frames": 582.5},
+    "cluster_dessert": {"n": 48, "median_frames": 567.5},
+    "cluster_drink": {"n": 51, "median_frames": 569.0},
+    "cluster_ingredients": {"n": 52, "median_frames": 600.0},
+    "cluster_toy": {"n": 43, "median_frames": 596.0},
+    "get_coffee": {"n": 29, "median_frames": 449.0},
+    "hammer_nail_and_hang_picture": {"n": 43, "median_frames": 332.0},
+    "play_math_game": {"n": 36, "median_frames": 327.5},
+    "rearrange_tube": {"n": 32, "median_frames": 481.5},
+    "set_study_table": {"n": 39, "median_frames": 276.0},
+    "texas_holdem": {"n": 36, "median_frames": 462.5}
+  },
+  "verdict": "FAIL",
+  "failure": "No released, data-backed candidate satisfies both genuine 4-6-stage dependency and reproducible level 1-3 boundaries."
+}

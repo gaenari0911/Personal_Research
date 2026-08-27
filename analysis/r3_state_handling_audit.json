@@ -1,0 +1,13 @@
+{
+  "schema_version": "r3-v1",
+  "episode_reset": "exactly once at each persistent execution start",
+  "subtask_transition_reset": false,
+  "episode_end": "explicit discard_episode_state",
+  "automatic_recurrent_state_detach": false,
+  "target_feature_detach_only": true,
+  "full_and_step_share_recurrence": true,
+  "full_recurrent_max_abs_error": 9.5367431640625e-07,
+  "full_reset_count": 1,
+  "step_reset_count": 1,
+  "b3_transition_reset_count": 1
+}

@@ -1,0 +1,122 @@
+[
+  {
+    "trajectory_id": "coffee_table/case180",
+    "relative_path": "RoboCerebra_trainset/coffee_table/case180/case180.mp4",
+    "local_path": "/ssd1/itaein/datasets/RoboCerebra/RoboCerebra_trainset/coffee_table/case180/case180.mp4",
+    "url": "https://huggingface.co/datasets/qiukingballball/RoboCerebra/resolve/main/RoboCerebra_trainset/coffee_table/case180/case180.mp4"
+  },
+  {
+    "trajectory_id": "coffee_table/case242",
+    "relative_path": "RoboCerebra_trainset/coffee_table/case242/case242.mp4",
+    "local_path": "/ssd1/itaein/datasets/RoboCerebra/RoboCerebra_trainset/coffee_table/case242/case242.mp4",
+    "url": "https://huggingface.co/datasets/qiukingballball/RoboCerebra/resolve/main/RoboCerebra_trainset/coffee_table/case242/case242.mp4"
+  },
+  {
+    "trajectory_id": "coffee_table/case280",
+    "relative_path": "RoboCerebra_trainset/coffee_table/case280/case280.mp4",
+    "local_path": "/ssd1/itaein/datasets/RoboCerebra/RoboCerebra_trainset/coffee_table/case280/case280.mp4",
+    "url": "https://huggingface.co/datasets/qiukingballball/RoboCerebra/resolve/main/RoboCerebra_trainset/coffee_table/case280/case280.mp4"
+  },
+  {
+    "trajectory_id": "coffee_table/case443",
+    "relative_path": "RoboCerebra_trainset/coffee_table/case443/case443.mp4",
+    "local_path": "/ssd1/itaein/datasets/RoboCerebra/RoboCerebra_trainset/coffee_table/case443/case443.mp4",
+    "url": "https://huggingface.co/datasets/qiukingballball/RoboCerebra/resolve/main/RoboCerebra_trainset/coffee_table/case443/case443.mp4"
+  },
+  {
+    "trajectory_id": "coffee_table/case522",
+    "relative_path": "RoboCerebra_trainset/coffee_table/case522/case522.mp4",
+    "local_path": "/ssd1/itaein/datasets/RoboCerebra/RoboCerebra_trainset/coffee_table/case522/case522.mp4",
+    "url": "https://huggingface.co/datasets/qiukingballball/RoboCerebra/resolve/main/RoboCerebra_trainset/coffee_table/case522/case522.mp4"
+  },
+  {
+    "trajectory_id": "coffee_table/case63",
+    "relative_path": "RoboCerebra_trainset/coffee_table/case63/case63.mp4",
+    "local_path": "/ssd1/itaein/datasets/RoboCerebra/RoboCerebra_trainset/coffee_table/case63/case63.mp4",
+    "url": "https://huggingface.co/datasets/qiukingballball/RoboCerebra/resolve/main/RoboCerebra_trainset/coffee_table/case63/case63.mp4"
+  },
+  {
+    "trajectory_id": "coffee_table/case688",
+    "relative_path": "RoboCerebra_trainset/coffee_table/case688/case688.mp4",
+    "local_path": "/ssd1/itaein/datasets/RoboCerebra/RoboCerebra_trainset/coffee_table/case688/case688.mp4",
+    "url": "https://huggingface.co/datasets/qiukingballball/RoboCerebra/resolve/main/RoboCerebra_trainset/coffee_table/case688/case688.mp4"
+  },
+  {
+    "trajectory_id": "coffee_table/case783",
+    "relative_path": "RoboCerebra_trainset/coffee_table/case783/case783.mp4",
+    "local_path": "/ssd1/itaein/datasets/RoboCerebra/RoboCerebra_trainset/coffee_table/case783/case783.mp4",
+    "url": "https://huggingface.co/datasets/qiukingballball/RoboCerebra/resolve/main/RoboCerebra_trainset/coffee_table/case783/case783.mp4"
+  },
+  {
+    "trajectory_id": "kitchen_table/case101",
+    "relative_path": "RoboCerebra_trainset/kitchen_table/case101/case101.mp4",
+    "local_path": "/ssd1/itaein/datasets/RoboCerebra/RoboCerebra_trainset/kitchen_table/case101/case101.mp4",
+    "url": "https://huggingface.co/datasets/qiukingballball/RoboCerebra/resolve/main/RoboCerebra_trainset/kitchen_table/case101/case101.mp4"
+  },
+  {
+    "trajectory_id": "kitchen_table/case22",
+    "relative_path": "RoboCerebra_trainset/kitchen_table/case22/case22.mp4",
+    "local_path": "/ssd1/itaein/datasets/RoboCerebra/RoboCerebra_trainset/kitchen_table/case22/case22.mp4",
+    "url": "https://huggingface.co/datasets/qiukingballball/RoboCerebra/resolve/main/RoboCerebra_trainset/kitchen_table/case22/case22.mp4"
+  },
+  {
+    "trajectory_id": "kitchen_table/case38",
+    "relative_path": "RoboCerebra_trainset/kitchen_table/case38/case38.mp4",
+    "local_path": "/ssd1/itaein/datasets/RoboCerebra/RoboCerebra_trainset/kitchen_table/case38/case38.mp4",
+    "url": "https://huggingface.co/datasets/qiukingballball/RoboCerebra/resolve/main/RoboCerebra_trainset/kitchen_table/case38/case38.mp4"
+  },
+  {
+    "trajectory_id": "kitchen_table/case61",
+    "relative_path": "RoboCerebra_trainset/kitchen_table/case61/case61.mp4",
+    "local_path": "/ssd1/itaein/datasets/RoboCerebra/RoboCerebra_trainset/kitchen_table/case61/case61.mp4",
+    "url": "https://huggingface.co/datasets/qiukingballball/RoboCerebra/resolve/main/RoboCerebra_trainset/kitchen_table/case61/case61.mp4"
+  },
+  {
+    "trajectory_id": "study_table/case1",
+    "relative_path": "RoboCerebra_trainset/study_table/case1/case1.mp4",
+    "local_path": "/ssd1/itaein/datasets/RoboCerebra/RoboCerebra_trainset/study_table/case1/case1.mp4",
+    "url": "https://huggingface.co/datasets/qiukingballball/RoboCerebra/resolve/main/RoboCerebra_trainset/study_table/case1/case1.mp4"
+  },
+  {
+    "trajectory_id": "study_table/case13",
+    "relative_path": "RoboCerebra_trainset/study_table/case13/case13.mp4",
+    "local_path": "/ssd1/itaein/datasets/RoboCerebra/RoboCerebra_trainset/study_table/case13/case13.mp4",
+    "url": "https://huggingface.co/datasets/qiukingballball/RoboCerebra/resolve/main/RoboCerebra_trainset/study_table/case13/case13.mp4"
+  },
+  {
+    "trajectory_id": "study_table/case60",
+    "relative_path": "RoboCerebra_trainset/study_table/case60/case60.mp4",
+    "local_path": "/ssd1/itaein/datasets/RoboCerebra/RoboCerebra_trainset/study_table/case60/case60.mp4",
+    "url": "https://huggingface.co/datasets/qiukingballball/RoboCerebra/resolve/main/RoboCerebra_trainset/study_table/case60/case60.mp4"
+  },
+  {
+    "trajectory_id": "study_table/case63",
+    "relative_path": "RoboCerebra_trainset/study_table/case63/case63.mp4",
+    "local_path": "/ssd1/itaein/datasets/RoboCerebra/RoboCerebra_trainset/study_table/case63/case63.mp4",
+    "url": "https://huggingface.co/datasets/qiukingballball/RoboCerebra/resolve/main/RoboCerebra_trainset/study_table/case63/case63.mp4"
+  },
+  {
+    "trajectory_id": "coffee_table/case258",
+    "relative_path": "RoboCerebra_trainset/coffee_table/case258/case258.mp4",
+    "local_path": "/ssd1/itaein/datasets/RoboCerebra/RoboCerebra_trainset/coffee_table/case258/case258.mp4",
+    "url": "https://huggingface.co/datasets/qiukingballball/RoboCerebra/resolve/main/RoboCerebra_trainset/coffee_table/case258/case258.mp4"
+  },
+  {
+    "trajectory_id": "coffee_table/case693",
+    "relative_path": "RoboCerebra_trainset/coffee_table/case693/case693.mp4",
+    "local_path": "/ssd1/itaein/datasets/RoboCerebra/RoboCerebra_trainset/coffee_table/case693/case693.mp4",
+    "url": "https://huggingface.co/datasets/qiukingballball/RoboCerebra/resolve/main/RoboCerebra_trainset/coffee_table/case693/case693.mp4"
+  },
+  {
+    "trajectory_id": "kitchen_table/case24",
+    "relative_path": "RoboCerebra_trainset/kitchen_table/case24/case24.mp4",
+    "local_path": "/ssd1/itaein/datasets/RoboCerebra/RoboCerebra_trainset/kitchen_table/case24/case24.mp4",
+    "url": "https://huggingface.co/datasets/qiukingballball/RoboCerebra/resolve/main/RoboCerebra_trainset/kitchen_table/case24/case24.mp4"
+  },
+  {
+    "trajectory_id": "study_table/case31",
+    "relative_path": "RoboCerebra_trainset/study_table/case31/case31.mp4",
+    "local_path": "/ssd1/itaein/datasets/RoboCerebra/RoboCerebra_trainset/study_table/case31/case31.mp4",
+    "url": "https://huggingface.co/datasets/qiukingballball/RoboCerebra/resolve/main/RoboCerebra_trainset/study_table/case31/case31.mp4"
+  }
+]

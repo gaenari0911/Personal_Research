@@ -1,0 +1,34 @@
+{
+  "task": "R2",
+  "r2_gate": "PASS",
+  "ready_for_model_implementation": true,
+  "checks": {
+    "G1_primary_probe_point": "PASS",
+    "G2_non_BC_objective": "PASS",
+    "G3_B0_B1_B2_B3_contract": "PASS",
+    "G4_current_retrieval": "PASS",
+    "G5_steps_since_transition": "PASS",
+    "G6_cumulative_transition_count": "PASS",
+    "G7_previous_1_2_3": "PASS",
+    "G8_CURRENT_leakage_rule": "PASS",
+    "G9_instantaneous_control": "PASS",
+    "G10_balanced_sampling": "PASS",
+    "G11_split_leakage_protocol": "PASS",
+    "G12_tests": "PASS"
+  },
+  "dry_run": {
+    "trajectories": 914,
+    "raw_frames": 2692031,
+    "balanced_probe_samples": 196035
+  },
+  "model_trained": false,
+  "behavior_cloning_performed": false,
+  "gpu_job_submitted": false,
+  "dataset_deleted": false,
+  "git_push_performed": false,
+  "test_summary": {
+    "total": 56,
+    "passed": 56,
+    "failed": 0
+  }
+}

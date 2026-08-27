@@ -1,0 +1,53 @@
+{
+  "audit_date": "2026-08-24",
+  "policy_action": {
+    "shape": [7],
+    "semantics": ["x", "y", "z", "roll", "pitch", "yaw", "gripper"],
+    "pose_type": "absolute end-effector target",
+    "position_frame": "robot-base-relative Cartesian frame",
+    "orientation": "SciPy extrinsic xyz Euler angles in radians",
+    "gripper": "binary: 1=open, 0=closed",
+    "frequency_hz": 10
+  },
+  "environment_control": {
+    "shape": [9],
+    "semantics": "seven arm joint position targets plus two finger joint targets",
+    "conversion": "official LeRobot wrapper converts the 7D absolute pose with IK before dm_control.before_step"
+  },
+  "sample_500_action_range": {
+    "min": [-0.562204, -0.110365, -0.015402, -3.141593, -1.570796, -3.141593, 0.0],
+    "max": [0.414126, 0.796102, 0.646008, 3.141593, 1.570796, 3.141593, 1.0]
+  },
+  "declared_box_mismatch": {
+    "wrapper_declares_euler_bounds": [-1.0, 1.0],
+    "released_data_reaches": [-3.141593, 3.141593],
+    "box_contains_all_released_actions": false
+  },
+  "delta_mode_audit": {
+    "wrapper_accepts_mode_name": "delta_eef",
+    "implementation_is_delta": false,
+    "finding": "The shared 7D conversion path interprets all EEF actions as absolute targets."
+  },
+  "alignment": {
+    "source_conclusion": "observation[t] -> action[t]",
+    "reason": "skill code prepends the pre-action observation and removes the final post-action observation",
+    "sample_median_abs_error": {
+      "xyz_action_vs_obs_t": 0.0068557,
+      "xyz_action_vs_obs_t_plus_1": 0.00348446,
+      "euler_action_vs_obs_t": 0.0064866,
+      "euler_action_vs_obs_t_plus_1": 0.00538264
+    },
+    "interpretation": "A target is expected to resemble the next observation more closely; this does not overturn source-level t alignment."
+  },
+  "mail_compatibility": {
+    "head_width": "UNCHANGED_7D",
+    "meaning": "CHANGED_FROM_LIBERO_DELTA_TO_VLABENCH_ABSOLUTE_TARGET",
+    "adapter": [
+      "fit per-dimension normalization on training split",
+      "denormalize policy output",
+      "pass absolute robot-frame pose to the official IK wrapper",
+      "do not integrate as a delta"
+    ],
+    "verdict": "ADAPTER_REQUIRED"
+  }
+}

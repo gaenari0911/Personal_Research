@@ -1,0 +1,31 @@
+{
+  "task": "R1-RC",
+  "r1_rc_gate": "PASS",
+  "ready_for_memory_protocol": true,
+  "clean_set_strength": "STRONG",
+  "strict_clean_trajectories": 914,
+  "checks": {
+    "G1_official_FULL": "PASS",
+    "G2_official_ordered_steps": "PASS",
+    "G3_official_temporal_boundaries": "PASS",
+    "G4_strict_clean_at_least_600": "PASS",
+    "G5_continuous_trajectory": "PASS",
+    "G6_state_separable": "PASS",
+    "G7_visual_mapping": "PASS",
+    "G8_conditioning": "PASS",
+    "G9_steps_since_transition": "PASS",
+    "G10_cumulative_transition_count": "PASS",
+    "G11_split_leakage_free": "PASS",
+    "G12_tests": "PASS"
+  },
+  "training_started": false,
+  "behavior_cloning_performed": false,
+  "gpu_job_submitted": false,
+  "data_deleted": false,
+  "git_push_performed": false,
+  "test_summary": {
+    "total": 24,
+    "passed": 24,
+    "failed": 0
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "schema_version": "stage-b-evaluation-v1",
+  "variant": "B2",
+  "split": "test",
+  "metrics": {
+    "current": {
+      "trajectory_count": 95,
+      "sample_count": 20921,
+      "recall_at_1": 0.33787124906725724,
+      "recall_at_1_ci_low": 0.3169399319320069,
+      "recall_at_1_ci_high": 0.36015642543276716,
+      "mrr": 0.5407020715576121,
+      "mrr_ci_low": 0.5223594198828216,
+      "mrr_ci_high": 0.5602253227853108,
+      "aggregation": "trajectory_macro_cell_step_hierarchy",
+      "bootstrap_unit": "trajectory",
+      "bootstrap_resamples": 2000,
+      "bootstrap_seed": 42
+    },
+    "prev1": {
+      "trajectory_count": 95,
+      "sample_count": 18537,
+      "recall_at_1": 0.31672765708949924,
+      "recall_at_1_ci_low": 0.2946621622599066,
+      "recall_at_1_ci_high": 0.34136321184037355,
+      "mrr": 0.5160246973502413,
+      "mrr_ci_low": 0.4966575062778493,
+      "mrr_ci_high": 0.5374843099287112,
+      "aggregation": "trajectory_macro_cell_step_hierarchy",
+      "bootstrap_unit": "trajectory",
+      "bootstrap_resamples": 2000,
+      "bootstrap_seed": 42
+    },
+    "prev2": {
+      "trajectory_count": 95,
+      "sample_count": 16267,
+      "recall_at_1": 0.21719537816864773,
+      "recall_at_1_ci_low": 0.20001364469800312,
+      "recall_at_1_ci_high": 0.23546398217575373,
+      "mrr": 0.4240305248005166,
+      "mrr_ci_low": 0.4076762682469637,
+      "mrr_ci_high": 0.4409442613517167,
+      "aggregation": "trajectory_macro_cell_step_hierarchy",
+      "bootstrap_unit": "trajectory",
+      "bootstrap_resamples": 2000,
+      "bootstrap_seed": 42
+    },
+    "prev3": {
+      "trajectory_count": 95,
+      "sample_count": 14109,
+      "recall_at_1": 0.18111083936600852,
+      "recall_at_1_ci_low": 0.16026506452898603,
+      "recall_at_1_ci_high": 0.20228837243800826,
+      "mrr": 0.39892871748007536,
+      "mrr_ci_low": 0.3771755034830524,
+      "mrr_ci_high": 0.4211075666228322,
+      "aggregation": "trajectory_macro_cell_step_hierarchy",
+      "bootstrap_unit": "trajectory",
+      "bootstrap_resamples": 2000,
+      "bootstrap_seed": 42
+    }
+  },
+  "interpretation_warning": "B2 current retrieval is an oracle-like upper bound because CURRENT text is injected every timestep; it is not evidence of memory.",
+  "test_split_evaluated": true,
+  "provenance": {
+    "probe_checkpoint": "/home/itaein/Personal_Research/checkpoints/stage_b/B2/selected_probes.pt",
+    "probe_checkpoint_sha256": "3ae0b929d468f86a6628132f9dd60a4f85e53c166165de5ed12da32eaa4d35ef",
+    "stage_a_checkpoint": {
+      "path": "/home/itaein/Personal_Research/checkpoints/stage_a/B2/best_val.pt",
+      "variant": "B2",
+      "global_update": 734,
+      "completed_epoch": 1,
+      "best_val": 3.3492570456336526,
+      "state_dict_sha256": "27802a4b01bfa4fa82cd206e96c2396c27d32ad4554a69cbe29794ad077ed455"
+    },
+    "sampling_sha256": "900795b166e3f512aff217d95783ead7a0abc901d01e049959daaa2c251e27ed"
+  }
+}

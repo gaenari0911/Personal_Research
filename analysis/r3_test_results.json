@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "total": 66,
+  "passed": 66,
+  "failed": 0,
+  "skipped": 0,
+  "r1_r2_regression_passed": 40,
+  "new_r3_passed": 26,
+  "summary_tail": [
+    "----------------------------------------------------------------------",
+    "Ran 66 tests in 2.142s",
+    "",
+    "OK"
+  ]
+}

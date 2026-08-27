@@ -1,0 +1,74 @@
+{
+  "trajectory_count": 914,
+  "frequency_hz": 20,
+  "trajectory_frames": {
+    "min": 258.0,
+    "mean": 2945.3293216630195,
+    "median": 2811.5,
+    "p75": 3503.0,
+    "p90": 4282.1,
+    "max": 8120.0
+  },
+  "trajectory_seconds": {
+    "min": 12.9,
+    "mean": 147.26646608315102,
+    "median": 140.575,
+    "p75": 175.14999999999998,
+    "p90": 214.10500000000002,
+    "max": 406.0
+  },
+  "official_steps_per_trajectory": {
+    "min": 2.0,
+    "mean": 8.961706783369802,
+    "median": 9.0,
+    "p75": 10.0,
+    "p90": 12.0,
+    "max": 23.0
+  },
+  "step_duration_frames": {
+    "min": 27.0,
+    "mean": 328.657184714931,
+    "median": 288.0,
+    "p75": 410.0,
+    "p90": 558.0,
+    "max": 2551.0
+  },
+  "step_duration_seconds": {
+    "min": 1.35,
+    "mean": 16.432859235746548,
+    "median": 14.4,
+    "p75": 20.5,
+    "p90": 27.9,
+    "max": 127.55
+  },
+  "transition_count_per_trajectory": {
+    "min": 1.0,
+    "mean": 7.961706783369803,
+    "median": 8.0,
+    "p75": 9.0,
+    "p90": 11.0,
+    "max": 22.0
+  },
+  "total_transitions": 7277,
+  "max_steps_since_transition_per_trajectory": {
+    "min": 178.0,
+    "mean": 614.8752735229759,
+    "median": 570.5,
+    "p75": 717.0,
+    "p90": 920.8000000000002,
+    "max": 2550.0
+  },
+  "step_duration_over_window_5": {
+    "min": 5.4,
+    "mean": 65.73143694298619,
+    "median": 57.6,
+    "p75": 82.0,
+    "p90": 111.6,
+    "max": 510.2
+  },
+  "scene_counts": {
+    "coffee_table": 715,
+    "kitchen_table": 128,
+    "study_table": 71
+  }
+}

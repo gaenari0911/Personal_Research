@@ -1,0 +1,31 @@
+{
+  "status": "resolved_for_task4_interface",
+  "hdf5_semantics": {
+    "observation": "obs[t] is returned by env.step(action[t]) and is therefore post-action",
+    "stored_state": "states[t] is the replay state before the same-row action[t]; replay code checks the result of action[t] against states[t+1]",
+    "source": "external/LIBERO/scripts/create_dataset.py:153-183,175-177,195-227"
+  },
+  "mail_original_loader": {
+    "behavior": "returns the same start:end slice for both images and actions",
+    "source": "external/MaIL/dataset/multi_task_dataset_aug.py:198-225"
+  },
+  "mail_original_target_selection": {
+    "behavior": "uses the first obs_seq rows as observations and actions from obs_seq-1 onward as targets",
+    "consequence": "the first original target is the action that already produced the last input observation",
+    "source": "docs/BASELINE_INSPECTION.md sections 6 and 9; external/MaIL agent action[:, obs_seq_len-1:] paths"
+  },
+  "selected_task4_policy_pair": {
+    "policy_observation_index": "t, for t=0..T-2",
+    "target_action_index": "t+1, for t=0..T-2",
+    "semantic_condition_index": "t+1, matching the target action's active subtask",
+    "first_unpaired_action": 0,
+    "last_unused_observation": "T-1",
+    "reason": "causal behavior cloning requires the observation available before the predicted action"
+  },
+  "boundary_example": {
+    "completion_observed_at": "obs[c]",
+    "policy_pair": "obs[c] -> action[c+1]",
+    "semantic_condition": "S2"
+  },
+  "provisional_oracle_risk": "The Task 3.1 trace extractor restored states[t] while review images use obs[t]. LIBERO replay code indicates states[t] precedes same-row action[t], so the human spot-check should pay particular attention to a possible one-row evidence offset. Task 4 remains dynamic: corrected annotation JSON is consumed without code changes."
+}

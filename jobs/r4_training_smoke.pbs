@@ -1,0 +1,19 @@
+#!/bin/bash
+#PBS -N r4_train_smoke
+#PBS -q pleiades1
+#PBS -l select=1:ncpus=4:ngpus=1
+#PBS -l walltime=04:00:00
+#PBS -j oe
+#PBS -o /home/itaein/Personal_Research/logs/r4/smoke_scheduler.log
+
+set -euo pipefail
+cd /home/itaein/Personal_Research
+export PYTHONPATH=/home/itaein/Personal_Research/src
+exec >logs/r4/training_smoke.log 2>&1
+/home/itaein/.conda/envs/egodex-box/bin/python tools/train_r4_pilot.py \
+  --variants B0 B1 \
+  --updates 1 \
+  --device cuda \
+  --smoke \
+  --output analysis/r4_smoke_summary.json \
+  --checkpoint-root checkpoints/r4

@@ -1,0 +1,10 @@
+{
+  "oracle_status": "provisional",
+  "human_spot_check_completed": false,
+  "approved_for_model_training": false,
+  "annotation_version": "libero_semantic_subtask_v1",
+  "protocol_revision": "task_3_1_causal_boundary",
+  "annotation_manifest_sha256": "6fe0e27888a44854c34f3ec07fa3f87a74cd2d4ca9ef6f0014c6b5a92c9259b1",
+  "aggregate_annotations_sha256": "88c167ebc5e4ae1d92854390aa80fe869e4b8f4cc3282333978f111a9f2e0769",
+  "note": "Task 4 inspection/testing is allowed. Model training remains blocked until explicit human approval."
+}

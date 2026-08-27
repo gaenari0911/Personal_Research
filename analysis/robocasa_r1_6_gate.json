@@ -1,0 +1,55 @@
+{
+  "task": "WashFruitColander",
+  "r1_6_gate": "FAIL",
+  "ready_for_r2": false,
+  "small_gate": "FAIL",
+  "full_489_processing_attempted": false,
+  "existing_dataset_preserved": true,
+  "libero_preserved": true,
+  "calvin_preserved": true,
+  "annotation_generation_logic_audit": {
+    "case": "CASE_C",
+    "official_generation_code_found": false,
+    "reusable": "NO",
+    "evidence": "Current source and all fetched git history contain only the 2026-07-07 announcement, not subtask_idx/subtask_name/subtask_stage generation logic."
+  },
+  "small_gate_checks": {
+    "G1_four_stages_source_defensible": "PASS",
+    "G2_deterministic_predicates": "FAIL",
+    "G3_at_least_four_ordered_samples": "FAIL",
+    "G4_video_boundary_sanity": "NOT_RUN",
+    "G5_no_demo_specific_exception": "PASS",
+    "G6_no_large_manual_annotation": "FAIL"
+  },
+  "small_validation": {
+    "episodes": [205, 379, 189, 341, 60],
+    "successful_ordered_timelines": 0,
+    "successful_initial_reconstructions": 0,
+    "successful_action_replays": 0,
+    "final_successes": 0
+  },
+  "final_gate_checks": {
+    "G1_four_stage_source_backed": "PASS",
+    "G2_deterministic_predicates_exist": "FAIL",
+    "G3_small_gate": "FAIL",
+    "G4_full_eligible_processing": "FAIL_NOT_ATTEMPTED",
+    "G5_valid_labels_at_least_400": "FAIL_0",
+    "G6_ordered_transitions": "FAIL_0_OF_5",
+    "G7_no_large_manual_labeling": "FAIL_CURRENT_ROUTE_BLOCKED",
+    "G8_existing_r1_regression": "PASS"
+  },
+  "exact_blockers": [
+    "OU.check_obj_in_receptacle requires MuJoCo contact and geometry unavailable from 16D parquet state.",
+    "Saved XML references assets absent locally; official Lightwheel colander assets are unavailable from the official HF archive and their Box URL returns 404.",
+    "No official per-frame annotation-generation code exists in the fetched repository history.",
+    "The independent S3 spout completion event is not universal: only 1/5 samples changed spout by more than 0.1 rad and no desired orientation is stored in task episode metadata."
+  ],
+  "tests": {
+    "existing_r1_and_common_passed": 24,
+    "existing_failed": 0,
+    "new_semantic_passed": 11,
+    "new_semantic_skipped": 1,
+    "new_semantic_failed": 0
+  },
+  "recommendation": "A"
+}

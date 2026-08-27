@@ -1,0 +1,158 @@
+{
+  "schema_version": "r3-v1",
+  "status": "PASS",
+  "trajectory_id": "study_table/case47",
+  "strict_clean_index": "/home/itaein/Personal_Research/analysis/robocerebra_memory_episode_index.json",
+  "num_episode_frames": 258,
+  "num_video_images": 259,
+  "frame_mapping": "MP4 image index t equals trajectory timestep t; final T image excluded",
+  "frames": [
+    0,
+    178,
+    179,
+    180
+  ],
+  "transition_boundary": 179,
+  "transition_sanity": {
+    "178": {
+      "text": null,
+      "inject": false
+    },
+    "179": {
+      "text": "Pour the cream cheese to the plate",
+      "inject": true
+    },
+    "180": {
+      "text": null,
+      "inject": false
+    }
+  },
+  "clip": {
+    "checkpoint": "openai/clip-vit-base-patch32",
+    "implementation": "transformers.CLIPModel",
+    "actual_pretrained_weights_loaded": true,
+    "parameter_count": 151277313,
+    "all_parameters_frozen": true,
+    "image_feature_shape": [
+      1,
+      4,
+      512
+    ],
+    "image_feature_norms": [
+      0.9999999403953552,
+      1.0,
+      0.9999999403953552,
+      0.9999998807907104
+    ],
+    "text_hold_encoded_as_string": false
+  },
+  "qpos": {
+    "source": "/ssd1/itaein/datasets/RoboCerebra/RoboCerebra_trainset/study_table/case47/demo.hdf5",
+    "slice": [
+      1,
+      10
+    ],
+    "shape": [
+      1,
+      4,
+      9
+    ]
+  },
+  "models": {
+    "B0": {
+      "instantaneous": [
+        1,
+        4,
+        128
+      ],
+      "temporal": [
+        1,
+        4,
+        128
+      ],
+      "future_prediction": [
+        1,
+        4,
+        512
+      ],
+      "persistent": false,
+      "state_returned": false,
+      "episode_reset_count": 0,
+      "state_steps": null,
+      "window_lengths": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "B1": {
+      "instantaneous": [
+        1,
+        4,
+        128
+      ],
+      "temporal": [
+        1,
+        4,
+        128
+      ],
+      "future_prediction": [
+        1,
+        4,
+        512
+      ],
+      "persistent": true,
+      "state_returned": true,
+      "episode_reset_count": 1,
+      "state_steps": 4,
+      "window_lengths": []
+    },
+    "B2": {
+      "instantaneous": [
+        1,
+        4,
+        128
+      ],
+      "temporal": [
+        1,
+        4,
+        128
+      ],
+      "future_prediction": [
+        1,
+        4,
+        512
+      ],
+      "persistent": true,
+      "state_returned": true,
+      "episode_reset_count": 1,
+      "state_steps": 4,
+      "window_lengths": []
+    },
+    "B3": {
+      "instantaneous": [
+        1,
+        4,
+        128
+      ],
+      "temporal": [
+        1,
+        4,
+        128
+      ],
+      "future_prediction": [
+        1,
+        4,
+        512
+      ],
+      "persistent": true,
+      "state_returned": true,
+      "episode_reset_count": 1,
+      "state_steps": 4,
+      "window_lengths": []
+    }
+  },
+  "b3_reset_exactly_once": true,
+  "full_recurrent_max_abs_error": 9.5367431640625e-07
+}

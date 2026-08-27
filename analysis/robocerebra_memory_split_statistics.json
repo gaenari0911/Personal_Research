@@ -1,0 +1,102 @@
+{
+  "strategy": "trajectory-level stratification by scene, num_steps quartile, and duration quartile",
+  "seed": 42,
+  "splits": {
+    "train": {
+      "count": 734,
+      "frames": {
+        "min": 258.0,
+        "mean": 2943.2643051771115,
+        "median": 2795.0,
+        "p75": 3503.0,
+        "p90": 4310.0,
+        "max": 7682.0
+      },
+      "steps": {
+        "min": 2.0,
+        "mean": 8.91825613079019,
+        "median": 9.0,
+        "p75": 10.0,
+        "p90": 12.0,
+        "max": 23.0
+      },
+      "transitions": {
+        "min": 1.0,
+        "mean": 7.918256130790191,
+        "median": 8.0,
+        "p75": 9.0,
+        "p90": 11.0,
+        "max": 22.0
+      },
+      "scene_counts": {
+        "coffee_table": 572,
+        "kitchen_table": 104,
+        "study_table": 58
+      }
+    },
+    "val": {
+      "count": 85,
+      "frames": {
+        "min": 860.0,
+        "mean": 2943.3882352941177,
+        "median": 2878.0,
+        "p75": 3456.0,
+        "p90": 4144.000000000003,
+        "max": 6267.0
+      },
+      "steps": {
+        "min": 4.0,
+        "mean": 9.011764705882353,
+        "median": 9.0,
+        "p75": 10.0,
+        "p90": 12.0,
+        "max": 17.0
+      },
+      "transitions": {
+        "min": 3.0,
+        "mean": 8.011764705882353,
+        "median": 8.0,
+        "p75": 9.0,
+        "p90": 11.0,
+        "max": 16.0
+      },
+      "scene_counts": {
+        "coffee_table": 70,
+        "kitchen_table": 9,
+        "study_table": 6
+      }
+    },
+    "test": {
+      "count": 95,
+      "frames": {
+        "min": 1262.0,
+        "mean": 2963.021052631579,
+        "median": 2843.0,
+        "p75": 3509.0,
+        "p90": 4105.6,
+        "max": 8120.0
+      },
+      "steps": {
+        "min": 5.0,
+        "mean": 9.25263157894737,
+        "median": 9.0,
+        "p75": 10.0,
+        "p90": 12.0,
+        "max": 19.0
+      },
+      "transitions": {
+        "min": 4.0,
+        "mean": 8.25263157894737,
+        "median": 8.0,
+        "p75": 9.0,
+        "p90": 11.0,
+        "max": 18.0
+      },
+      "scene_counts": {
+        "coffee_table": 73,
+        "kitchen_table": 15,
+        "study_table": 7
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "trajectory_id_overlap": {
+    "train_val": [],
+    "train_test": [],
+    "val_test": []
+  },
+  "source_path_overlap": {
+    "train_val": [],
+    "train_test": [],
+    "val_test": []
+  },
+  "source_hash_overlap": {
+    "train_val": [],
+    "train_test": [],
+    "val_test": []
+  },
+  "duplicate_source_hash_group_count": 0,
+  "exact_full_texts_crossing_splits": 1,
+  "exact_full_text_overlap_is_input_metadata_not_trajectory_leakage": true,
+  "leakage_free": true
+}

@@ -1,0 +1,27 @@
+{
+  "audit_date": "2026-08-24",
+  "source_transform_available": true,
+  "source_transform": "7D absolute robot-frame EEF target -> quaternion/IK -> 9D joint/finger control",
+  "continuous_generation": true,
+  "reset_between_expert_skills": false,
+  "released_episode_replayable_exactly": false,
+  "missing_from_released_dataset": [
+    "episode_config",
+    "initial simulator physics state",
+    "resolved asset state",
+    "per-frame skill index",
+    "per-frame simulator predicates"
+  ],
+  "metadata_filepath_note": "metadata.filepath is a string reference to the original generation artifact, not the artifact itself.",
+  "representative_visual_playback": {
+    "verified": true,
+    "episodes": [0, 8, 30],
+    "finding": "H.264 derivatives play continuously and show no inter-stage environment reset/cut."
+  },
+  "action_reexecution": {
+    "attempted": false,
+    "reason": "No reconstructible initial state and assets are absent; running the values from an arbitrary reset would not be a valid replay test."
+  },
+  "final_success_reproduced": false,
+  "verdict": "NOT_REPRODUCIBLE_FROM_RELEASED_DATASET"
+}

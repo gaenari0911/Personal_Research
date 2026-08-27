@@ -1,0 +1,15 @@
+{
+  "schema_version": "stage-a-v1",
+  "STAGE_A_GATE": "PASS",
+  "READY_FOR_PROBE_TEST_METRIC": "YES",
+  "SMOKE": "PASS",
+  "CACHE": "PASS",
+  "B0": "PASS",
+  "B1": "PASS",
+  "B2": "PASS",
+  "B3": "PASS",
+  "FAIRNESS": "PASS",
+  "TEST_UNUSED": "PASS",
+  "last_successfully_completed_stage": "STAGE_B_TEST95_FINAL_EVALUATION",
+  "STAGE_B": "PASS"
+}

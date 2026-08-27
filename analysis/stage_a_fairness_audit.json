@@ -1,0 +1,31 @@
+{
+  "schema_version": "stage-a-v1",
+  "status": "PASS",
+  "common_initialization_sha256": "aeffa23a4387256da39a517eb38c06197eb7302d65814dacdfe90cdaef511dcd",
+  "same_train_split": true,
+  "same_val_split": true,
+  "same_epoch_orders": true,
+  "same_anchor_ids": true,
+  "same_optimizer": {
+    "name": "AdamW",
+    "learning_rate": 0.0001,
+    "weight_decay": 0.01,
+    "gradient_clip_norm": 1.0,
+    "scheduler": "none"
+  },
+  "same_objective": {
+    "name": "one_way_in_batch_InfoNCE",
+    "future_horizon": 20,
+    "temperature": 0.07,
+    "anchors_per_trajectory_cap": 64,
+    "minimum_anchors_per_trajectory": 8,
+    "smoke_anchors": 8,
+    "behavior_cloning": false,
+    "action_prediction": false
+  },
+  "same_epoch_budget": true,
+  "checkpoint_independence": true,
+  "weight_continuation": false,
+  "test_split_used": false,
+  "selected_epochs_per_model": 1
+}

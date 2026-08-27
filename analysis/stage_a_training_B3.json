@@ -1,0 +1,105 @@
+{
+  "schema_version": "stage-a-v1",
+  "mode": "full",
+  "variant": "B3",
+  "status": "PASS",
+  "epochs_requested": 1,
+  "epochs_completed": 1,
+  "global_updates": 734,
+  "initial_validation": {
+    "loss": 4.175609538134407,
+    "positive_cosine": -0.04490349615978844,
+    "negative_cosine": -0.044433911856921283,
+    "temporal": {
+      "mean_norm": 11.313652038574219,
+      "mean_per_dimension_std": 0.4259601831436157,
+      "pairwise_cosine_mean": 0.8033323884010315,
+      "pairwise_cosine_std": 0.13865767419338226,
+      "collapsed": false,
+      "thresholds": {
+        "minimum_mean_per_dimension_std": 0.001,
+        "minimum_pairwise_cosine_std": 0.001
+      }
+    },
+    "future_prediction": {
+      "mean_norm": 1.0,
+      "mean_per_dimension_std": 0.018822744488716125,
+      "pairwise_cosine_mean": 0.7990493774414062,
+      "pairwise_cosine_std": 0.1413712054491043,
+      "collapsed": false,
+      "thresholds": {
+        "minimum_mean_per_dimension_std": 0.001,
+        "minimum_pairwise_cosine_std": 0.001
+      }
+    },
+    "episodes": 85,
+    "anchors": 5440
+  },
+  "epochs": [
+    {
+      "epoch": 1,
+      "updates": 734,
+      "mean_train_loss": 3.56836779176052,
+      "final_train_update": {
+        "epoch": 1,
+        "epoch_position": 734,
+        "global_update": 734,
+        "trajectory_id": "kitchen_table/case74",
+        "sequence_length": 2941,
+        "learning_rate": 0.0001,
+        "loss": 3.560863494873047,
+        "positive_cosine": 0.15065157413482666,
+        "negative_cosine": 0.0915665403008461,
+        "gradient_norm_before_clip": 6.944337368011475,
+        "parameter_norm": 620.7188186464787,
+        "z_norm": 11.300254821777344,
+        "z_mean_per_dimension_std": 0.814733624458313,
+        "prediction_mean_per_dimension_std": 0.036941077560186386,
+        "anchors": 64
+      },
+      "validation": {
+        "loss": 3.351254482830272,
+        "positive_cosine": 0.1364575231776518,
+        "negative_cosine": 0.05954578746767605,
+        "temporal": {
+          "mean_norm": 11.305984497070312,
+          "mean_per_dimension_std": 0.9424492120742798,
+          "pairwise_cosine_mean": 0.08543822169303894,
+          "pairwise_cosine_std": 0.314365953207016,
+          "collapsed": false,
+          "thresholds": {
+            "minimum_mean_per_dimension_std": 0.001,
+            "minimum_pairwise_cosine_std": 0.001
+          }
+        },
+        "future_prediction": {
+          "mean_norm": 1.0,
+          "mean_per_dimension_std": 0.0417739674448967,
+          "pairwise_cosine_mean": 0.047219980508089066,
+          "pairwise_cosine_std": 0.32608911395072937,
+          "collapsed": false,
+          "thresholds": {
+            "minimum_mean_per_dimension_std": 0.001,
+            "minimum_pairwise_cosine_std": 0.001
+          }
+        },
+        "episodes": 85,
+        "anchors": 5440
+      },
+      "collapse": false,
+      "training_seconds": 37755.884491896955,
+      "validation_seconds": 452.5315743589308
+    }
+  ],
+  "common_initialization_sha256": "aeffa23a4387256da39a517eb38c06197eb7302d65814dacdfe90cdaef511dcd",
+  "best_checkpoint": "/home/itaein/Personal_Research/checkpoints/stage_a/B3/best_val.pt",
+  "last_checkpoint": "/home/itaein/Personal_Research/checkpoints/stage_a/B3/last.pt",
+  "best_val_loss": 3.351254482830272,
+  "gpu_peak_memory_bytes": 631509504,
+  "runtime_seconds": 38624.627028347924,
+  "execution_mode": "full_sequence_gradient_checkpointed_no_detach",
+  "test_split_used": false,
+  "behavior_cloning": false,
+  "action_prediction": false,
+  "amp": false
+}

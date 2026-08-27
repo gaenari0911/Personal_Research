@@ -1,0 +1,13 @@
+{
+  "status": "SKIPPED",
+  "reason": "R1_DATA_GATE=FAIL; destructive cleanup is forbidden.",
+  "libero_path": "/ssd1/itaein/datasets/LIBERO/libero_10",
+  "libero_after": "PRESERVED",
+  "libero_exists": true,
+  "calvin_debug_path": "/ssd1/itaein/datasets/CALVIN/debug",
+  "calvin_debug_after": "PRESERVED",
+  "calvin_debug_exists": true,
+  "disk_free_before_bytes": 509766660096,
+  "disk_free_after_bytes": 509766660096,
+  "bytes_freed": 0
+}

@@ -1,0 +1,464 @@
+{
+  "schema_version": "stage-a-v1",
+  "status": "PASS",
+  "stage_a_gate": "PASS",
+  "ready_for_probe_test_metric": "YES",
+  "models": {
+    "B0": {
+      "schema_version": "stage-a-v1",
+      "mode": "full",
+      "variant": "B0",
+      "status": "PASS",
+      "epochs_requested": 1,
+      "epochs_completed": 1,
+      "global_updates": 734,
+      "initial_validation": {
+        "loss": 4.1757190031163836,
+        "positive_cosine": -0.04445288605330622,
+        "negative_cosine": -0.04397790650015368,
+        "temporal": {
+          "mean_norm": 11.313652992248535,
+          "mean_per_dimension_std": 0.42562374472618103,
+          "pairwise_cosine_mean": 0.8036928176879883,
+          "pairwise_cosine_std": 0.13830700516700745,
+          "collapsed": false,
+          "thresholds": {
+            "minimum_mean_per_dimension_std": 0.001,
+            "minimum_pairwise_cosine_std": 0.001
+          }
+        },
+        "future_prediction": {
+          "mean_norm": 1.0,
+          "mean_per_dimension_std": 0.018809592351317406,
+          "pairwise_cosine_mean": 0.7993661165237427,
+          "pairwise_cosine_std": 0.14105704426765442,
+          "collapsed": false,
+          "thresholds": {
+            "minimum_mean_per_dimension_std": 0.001,
+            "minimum_pairwise_cosine_std": 0.001
+          }
+        },
+        "episodes": 85,
+        "anchors": 5440
+      },
+      "epochs": [
+        {
+          "epoch": 1,
+          "updates": 734,
+          "mean_train_loss": 3.5700827934436643,
+          "final_train_update": {
+            "epoch": 1,
+            "epoch_position": 734,
+            "global_update": 734,
+            "trajectory_id": "kitchen_table/case74",
+            "sequence_length": 2941,
+            "learning_rate": 0.0001,
+            "loss": 3.558504581451416,
+            "positive_cosine": 0.14893527328968048,
+            "negative_cosine": 0.08983466774225235,
+            "gradient_norm_before_clip": 6.8658928871154785,
+            "parameter_norm": 621.0395028418552,
+            "z_norm": 11.303834915161133,
+            "z_mean_per_dimension_std": 0.8169257044792175,
+            "prediction_mean_per_dimension_std": 0.036791056394577026,
+            "anchors": 64
+          },
+          "validation": {
+            "loss": 3.3570817891289204,
+            "positive_cosine": 0.13501501802135915,
+            "negative_cosine": 0.05837525129318237,
+            "temporal": {
+              "mean_norm": 11.308588981628418,
+              "mean_per_dimension_std": 0.9471480250358582,
+              "pairwise_cosine_mean": 0.07726476341485977,
+              "pairwise_cosine_std": 0.32083582878112793,
+              "collapsed": false,
+              "thresholds": {
+                "minimum_mean_per_dimension_std": 0.001,
+                "minimum_pairwise_cosine_std": 0.001
+              }
+            },
+            "future_prediction": {
+              "mean_norm": 1.0,
+              "mean_per_dimension_std": 0.041762687265872955,
+              "pairwise_cosine_mean": 0.04740746691823006,
+              "pairwise_cosine_std": 0.32742807269096375,
+              "collapsed": false,
+              "thresholds": {
+                "minimum_mean_per_dimension_std": 0.001,
+                "minimum_pairwise_cosine_std": 0.001
+              }
+            },
+            "episodes": 85,
+            "anchors": 5440
+          },
+          "collapse": false,
+          "training_seconds": 93.59347150009125,
+          "validation_seconds": 3.1905695600435138
+        }
+      ],
+      "common_initialization_sha256": "aeffa23a4387256da39a517eb38c06197eb7302d65814dacdfe90cdaef511dcd",
+      "best_checkpoint": "/home/itaein/Personal_Research/checkpoints/stage_a/B0/best_val.pt",
+      "last_checkpoint": "/home/itaein/Personal_Research/checkpoints/stage_a/B0/last.pt",
+      "best_val_loss": 3.3570817891289204,
+      "gpu_peak_memory_bytes": 422044160,
+      "runtime_seconds": 101.32504138513468,
+      "execution_mode": "independent_windows",
+      "test_split_used": false,
+      "behavior_cloning": false,
+      "action_prediction": false,
+      "amp": false
+    },
+    "B1": {
+      "schema_version": "stage-a-v1",
+      "mode": "full",
+      "variant": "B1",
+      "status": "PASS",
+      "epochs_requested": 1,
+      "epochs_completed": 1,
+      "global_updates": 734,
+      "initial_validation": {
+        "loss": 4.175731350393856,
+        "positive_cosine": -0.04443015348823631,
+        "negative_cosine": -0.043952237321611715,
+        "temporal": {
+          "mean_norm": 11.313652038574219,
+          "mean_per_dimension_std": 0.4256047010421753,
+          "pairwise_cosine_mean": 0.8036954402923584,
+          "pairwise_cosine_std": 0.13830982148647308,
+          "collapsed": false,
+          "thresholds": {
+            "minimum_mean_per_dimension_std": 0.001,
+            "minimum_pairwise_cosine_std": 0.001
+          }
+        },
+        "future_prediction": {
+          "mean_norm": 1.0,
+          "mean_per_dimension_std": 0.018807528540492058,
+          "pairwise_cosine_mean": 0.7993932962417603,
+          "pairwise_cosine_std": 0.14104682207107544,
+          "collapsed": false,
+          "thresholds": {
+            "minimum_mean_per_dimension_std": 0.001,
+            "minimum_pairwise_cosine_std": 0.001
+          }
+        },
+        "episodes": 85,
+        "anchors": 5440
+      },
+      "epochs": [
+        {
+          "epoch": 1,
+          "updates": 734,
+          "mean_train_loss": 3.5682968589850277,
+          "final_train_update": {
+            "epoch": 1,
+            "epoch_position": 734,
+            "global_update": 734,
+            "trajectory_id": "kitchen_table/case74",
+            "sequence_length": 2941,
+            "learning_rate": 0.0001,
+            "loss": 3.559631824493408,
+            "positive_cosine": 0.1509380042552948,
+            "negative_cosine": 0.09189503639936447,
+            "gradient_norm_before_clip": 6.8751726150512695,
+            "parameter_norm": 620.7225572874925,
+            "z_norm": 11.30016040802002,
+            "z_mean_per_dimension_std": 0.8135920763015747,
+            "prediction_mean_per_dimension_std": 0.03696204721927643,
+            "anchors": 64
+          },
+          "validation": {
+            "loss": 3.3507321806514963,
+            "positive_cosine": 0.13644730492549784,
+            "negative_cosine": 0.05945941324838821,
+            "temporal": {
+              "mean_norm": 11.305848121643066,
+              "mean_per_dimension_std": 0.9421378374099731,
+              "pairwise_cosine_mean": 0.08608128875494003,
+              "pairwise_cosine_std": 0.3139411509037018,
+              "collapsed": false,
+              "thresholds": {
+                "minimum_mean_per_dimension_std": 0.001,
+                "minimum_pairwise_cosine_std": 0.001
+              }
+            },
+            "future_prediction": {
+              "mean_norm": 1.0,
+              "mean_per_dimension_std": 0.04179343581199646,
+              "pairwise_cosine_mean": 0.046431366354227066,
+              "pairwise_cosine_std": 0.3260261118412018,
+              "collapsed": false,
+              "thresholds": {
+                "minimum_mean_per_dimension_std": 0.001,
+                "minimum_pairwise_cosine_std": 0.001
+              }
+            },
+            "episodes": 85,
+            "anchors": 5440
+          },
+          "collapse": false,
+          "training_seconds": 37833.69143982418,
+          "validation_seconds": 445.45180885097943
+        }
+      ],
+      "common_initialization_sha256": "aeffa23a4387256da39a517eb38c06197eb7302d65814dacdfe90cdaef511dcd",
+      "best_checkpoint": "/home/itaein/Personal_Research/checkpoints/stage_a/B1/best_val.pt",
+      "last_checkpoint": "/home/itaein/Personal_Research/checkpoints/stage_a/B1/last.pt",
+      "best_val_loss": 3.3507321806514963,
+      "gpu_peak_memory_bytes": 631509504,
+      "runtime_seconds": 38691.80868259305,
+      "execution_mode": "full_sequence_gradient_checkpointed_no_detach",
+      "test_split_used": false,
+      "behavior_cloning": false,
+      "action_prediction": false,
+      "amp": false
+    },
+    "B2": {
+      "schema_version": "stage-a-v1",
+      "mode": "full",
+      "variant": "B2",
+      "status": "PASS",
+      "epochs_requested": 1,
+      "epochs_completed": 1,
+      "global_updates": 734,
+      "initial_validation": {
+        "loss": 4.17572462979485,
+        "positive_cosine": -0.0442767740062931,
+        "negative_cosine": -0.04380036399644964,
+        "temporal": {
+          "mean_norm": 11.313652992248535,
+          "mean_per_dimension_std": 0.42564553022384644,
+          "pairwise_cosine_mean": 0.8036515116691589,
+          "pairwise_cosine_std": 0.13836129009723663,
+          "collapsed": false,
+          "thresholds": {
+            "minimum_mean_per_dimension_std": 0.001,
+            "minimum_pairwise_cosine_std": 0.001
+          }
+        },
+        "future_prediction": {
+          "mean_norm": 1.0,
+          "mean_per_dimension_std": 0.01881326176226139,
+          "pairwise_cosine_mean": 0.7992753982543945,
+          "pairwise_cosine_std": 0.1411365419626236,
+          "collapsed": false,
+          "thresholds": {
+            "minimum_mean_per_dimension_std": 0.001,
+            "minimum_pairwise_cosine_std": 0.001
+          }
+        },
+        "episodes": 85,
+        "anchors": 5440
+      },
+      "epochs": [
+        {
+          "epoch": 1,
+          "updates": 734,
+          "mean_train_loss": 3.5675578909933727,
+          "final_train_update": {
+            "epoch": 1,
+            "epoch_position": 734,
+            "global_update": 734,
+            "trajectory_id": "kitchen_table/case74",
+            "sequence_length": 2941,
+            "learning_rate": 0.0001,
+            "loss": 3.557818651199341,
+            "positive_cosine": 0.15040650963783264,
+            "negative_cosine": 0.09116456657648087,
+            "gradient_norm_before_clip": 6.893118381500244,
+            "parameter_norm": 620.7242904623132,
+            "z_norm": 11.300369262695312,
+            "z_mean_per_dimension_std": 0.8157281875610352,
+            "prediction_mean_per_dimension_std": 0.03701828047633171,
+            "anchors": 64
+          },
+          "validation": {
+            "loss": 3.3492570456336526,
+            "positive_cosine": 0.13695168609128278,
+            "negative_cosine": 0.05988592569004087,
+            "temporal": {
+              "mean_norm": 11.30566120147705,
+              "mean_per_dimension_std": 0.9417566061019897,
+              "pairwise_cosine_mean": 0.08673937618732452,
+              "pairwise_cosine_std": 0.31367626786231995,
+              "collapsed": false,
+              "thresholds": {
+                "minimum_mean_per_dimension_std": 0.001,
+                "minimum_pairwise_cosine_std": 0.001
+              }
+            },
+            "future_prediction": {
+              "mean_norm": 1.0,
+              "mean_per_dimension_std": 0.04178553819656372,
+              "pairwise_cosine_mean": 0.04671945050358772,
+              "pairwise_cosine_std": 0.3258543610572815,
+              "collapsed": false,
+              "thresholds": {
+                "minimum_mean_per_dimension_std": 0.001,
+                "minimum_pairwise_cosine_std": 0.001
+              }
+            },
+            "episodes": 85,
+            "anchors": 5440
+          },
+          "collapse": false,
+          "training_seconds": 37793.83313430892,
+          "validation_seconds": 416.7645984850824
+        }
+      ],
+      "common_initialization_sha256": "aeffa23a4387256da39a517eb38c06197eb7302d65814dacdfe90cdaef511dcd",
+      "best_checkpoint": "/home/itaein/Personal_Research/checkpoints/stage_a/B2/best_val.pt",
+      "last_checkpoint": "/home/itaein/Personal_Research/checkpoints/stage_a/B2/last.pt",
+      "best_val_loss": 3.3492570456336526,
+      "gpu_peak_memory_bytes": 631509504,
+      "runtime_seconds": 38653.555563159054,
+      "execution_mode": "full_sequence_gradient_checkpointed_no_detach",
+      "test_split_used": false,
+      "behavior_cloning": false,
+      "action_prediction": false,
+      "amp": false
+    },
+    "B3": {
+      "schema_version": "stage-a-v1",
+      "mode": "full",
+      "variant": "B3",
+      "status": "PASS",
+      "epochs_requested": 1,
+      "epochs_completed": 1,
+      "global_updates": 734,
+      "initial_validation": {
+        "loss": 4.175609538134407,
+        "positive_cosine": -0.04490349615978844,
+        "negative_cosine": -0.044433911856921283,
+        "temporal": {
+          "mean_norm": 11.313652038574219,
+          "mean_per_dimension_std": 0.4259601831436157,
+          "pairwise_cosine_mean": 0.8033323884010315,
+          "pairwise_cosine_std": 0.13865767419338226,
+          "collapsed": false,
+          "thresholds": {
+            "minimum_mean_per_dimension_std": 0.001,
+            "minimum_pairwise_cosine_std": 0.001
+          }
+        },
+        "future_prediction": {
+          "mean_norm": 1.0,
+          "mean_per_dimension_std": 0.018822744488716125,
+          "pairwise_cosine_mean": 0.7990493774414062,
+          "pairwise_cosine_std": 0.1413712054491043,
+          "collapsed": false,
+          "thresholds": {
+            "minimum_mean_per_dimension_std": 0.001,
+            "minimum_pairwise_cosine_std": 0.001
+          }
+        },
+        "episodes": 85,
+        "anchors": 5440
+      },
+      "epochs": [
+        {
+          "epoch": 1,
+          "updates": 734,
+          "mean_train_loss": 3.56836779176052,
+          "final_train_update": {
+            "epoch": 1,
+            "epoch_position": 734,
+            "global_update": 734,
+            "trajectory_id": "kitchen_table/case74",
+            "sequence_length": 2941,
+            "learning_rate": 0.0001,
+            "loss": 3.560863494873047,
+            "positive_cosine": 0.15065157413482666,
+            "negative_cosine": 0.0915665403008461,
+            "gradient_norm_before_clip": 6.944337368011475,
+            "parameter_norm": 620.7188186464787,
+            "z_norm": 11.300254821777344,
+            "z_mean_per_dimension_std": 0.814733624458313,
+            "prediction_mean_per_dimension_std": 0.036941077560186386,
+            "anchors": 64
+          },
+          "validation": {
+            "loss": 3.351254482830272,
+            "positive_cosine": 0.1364575231776518,
+            "negative_cosine": 0.05954578746767605,
+            "temporal": {
+              "mean_norm": 11.305984497070312,
+              "mean_per_dimension_std": 0.9424492120742798,
+              "pairwise_cosine_mean": 0.08543822169303894,
+              "pairwise_cosine_std": 0.314365953207016,
+              "collapsed": false,
+              "thresholds": {
+                "minimum_mean_per_dimension_std": 0.001,
+                "minimum_pairwise_cosine_std": 0.001
+              }
+            },
+            "future_prediction": {
+              "mean_norm": 1.0,
+              "mean_per_dimension_std": 0.0417739674448967,
+              "pairwise_cosine_mean": 0.047219980508089066,
+              "pairwise_cosine_std": 0.32608911395072937,
+              "collapsed": false,
+              "thresholds": {
+                "minimum_mean_per_dimension_std": 0.001,
+                "minimum_pairwise_cosine_std": 0.001
+              }
+            },
+            "episodes": 85,
+            "anchors": 5440
+          },
+          "collapse": false,
+          "training_seconds": 37755.884491896955,
+          "validation_seconds": 452.5315743589308
+        }
+      ],
+      "common_initialization_sha256": "aeffa23a4387256da39a517eb38c06197eb7302d65814dacdfe90cdaef511dcd",
+      "best_checkpoint": "/home/itaein/Personal_Research/checkpoints/stage_a/B3/best_val.pt",
+      "last_checkpoint": "/home/itaein/Personal_Research/checkpoints/stage_a/B3/last.pt",
+      "best_val_loss": 3.351254482830272,
+      "gpu_peak_memory_bytes": 631509504,
+      "runtime_seconds": 38624.627028347924,
+      "execution_mode": "full_sequence_gradient_checkpointed_no_detach",
+      "test_split_used": false,
+      "behavior_cloning": false,
+      "action_prediction": false,
+      "amp": false
+    }
+  },
+  "epochs_per_model": 1,
+  "compute_plan": {
+    "schema_version": "stage-a-v1",
+    "status": "PASS",
+    "requested_walltime_seconds": 259200.0,
+    "elapsed_before_full_training_seconds": 18417.714450120926,
+    "remaining_walltime_seconds": 240782.28554987907,
+    "safety_reserve_fraction": 0.25,
+    "usable_seconds_after_reserve": 180586.7141624093,
+    "per_model_epoch_estimate_seconds": {
+      "B0": 367.7499977994826,
+      "B1": 60406.57751652909,
+      "B2": 59888.9948713968,
+      "B3": 62174.24238530342
+    },
+    "candidate_total_estimates_seconds": {
+      "3": 368642.45970549755,
+      "2": 246061.63980366502,
+      "1": 123480.81990183251
+    },
+    "fixed_overhead_seconds": 900.0,
+    "selected_epochs_per_model": 1,
+    "selection_rule": "largest common epoch count in [3,2,1] fitting two-GPU paired execution within remaining walltime with >=25% reserve",
+    "parallel_variant_pairs": [
+      [
+        "B0",
+        "B1"
+      ],
+      [
+        "B2",
+        "B3"
+      ]
+    ],
+    "smoke_scaling_is_conservative": true
+  },
+  "test_split_used": false
+}

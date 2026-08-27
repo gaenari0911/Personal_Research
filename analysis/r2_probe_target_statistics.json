@@ -1,0 +1,123 @@
+{
+  "candidate_definition": "ordered official Step text entries within each trajectory",
+  "duplicate_text_policy": "identical casefolded/whitespace-normalized texts are one positive equivalence class",
+  "splits": {
+    "train": {
+      "trajectory_count": 734,
+      "candidate_count": {
+        "min": 2.0,
+        "mean": 8.91825613079019,
+        "median": 9.0,
+        "p75": 10.0,
+        "p90": 12.0,
+        "max": 23.0
+      },
+      "unique_normalized_candidate_text_count": {
+        "min": 2.0,
+        "mean": 8.889645776566757,
+        "median": 9.0,
+        "p75": 10.0,
+        "p90": 12.0,
+        "max": 22.0
+      },
+      "trajectories_with_duplicate_normalized_step_text": 20,
+      "duplicate_normalized_text_group_count": 21,
+      "current_balanced_target_count": 156821,
+      "previous_targets": {
+        "1": {
+          "raw_eligible_frames": 1885793,
+          "balanced_target_count": 138649,
+          "eligible_trajectories": 734
+        },
+        "2": {
+          "raw_eligible_frames": 1656450,
+          "balanced_target_count": 121214,
+          "eligible_trajectories": 733
+        },
+        "3": {
+          "raw_eligible_frames": 1439240,
+          "balanced_target_count": 104211,
+          "eligible_trajectories": 731
+        }
+      }
+    },
+    "val": {
+      "trajectory_count": 85,
+      "candidate_count": {
+        "min": 4.0,
+        "mean": 9.011764705882353,
+        "median": 9.0,
+        "p75": 10.0,
+        "p90": 12.0,
+        "max": 17.0
+      },
+      "unique_normalized_candidate_text_count": {
+        "min": 4.0,
+        "mean": 8.976470588235294,
+        "median": 9.0,
+        "p75": 10.0,
+        "p90": 12.0,
+        "max": 17.0
+      },
+      "trajectories_with_duplicate_normalized_step_text": 3,
+      "duplicate_normalized_text_group_count": 3,
+      "current_balanced_target_count": 18293,
+      "previous_targets": {
+        "1": {
+          "raw_eligible_frames": 219032,
+          "balanced_target_count": 16185,
+          "eligible_trajectories": 85
+        },
+        "2": {
+          "raw_eligible_frames": 193687,
+          "balanced_target_count": 14185,
+          "eligible_trajectories": 85
+        },
+        "3": {
+          "raw_eligible_frames": 169374,
+          "balanced_target_count": 12219,
+          "eligible_trajectories": 85
+        }
+      }
+    },
+    "test": {
+      "trajectory_count": 95,
+      "candidate_count": {
+        "min": 5.0,
+        "mean": 9.25263157894737,
+        "median": 9.0,
+        "p75": 10.0,
+        "p90": 12.0,
+        "max": 19.0
+      },
+      "unique_normalized_candidate_text_count": {
+        "min": 5.0,
+        "mean": 9.210526315789474,
+        "median": 9.0,
+        "p75": 10.0,
+        "p90": 12.0,
+        "max": 19.0
+      },
+      "trajectories_with_duplicate_normalized_step_text": 3,
+      "duplicate_normalized_text_group_count": 4,
+      "current_balanced_target_count": 20921,
+      "previous_targets": {
+        "1": {
+          "raw_eligible_frames": 245812,
+          "balanced_target_count": 18537,
+          "eligible_trajectories": 95
+        },
+        "2": {
+          "raw_eligible_frames": 214005,
+          "balanced_target_count": 16267,
+          "eligible_trajectories": 95
+        },
+        "3": {
+          "raw_eligible_frames": 188107,
+          "balanced_target_count": 14109,
+          "eligible_trajectories": 95
+        }
+      }
+    }
+  }
+}

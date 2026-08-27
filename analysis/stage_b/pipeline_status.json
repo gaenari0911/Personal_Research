@@ -1,0 +1,186 @@
+{
+  "schema_version": "stage-b-pipeline-v1",
+  "status": "PASS",
+  "started_at": 1787798359.1463661,
+  "plan": {
+    "report_validation_metrics": false,
+    "final_test": true,
+    "variants": [
+      "B0",
+      "B1",
+      "B2",
+      "B3"
+    ],
+    "extract_pairs": [
+      [
+        "B0",
+        "B1"
+      ],
+      [
+        "B2",
+        "B3"
+      ]
+    ],
+    "gpu_ids": [
+      "GPU-4115a7b9-dc29-2c21-cf0f-9ddbdab38318",
+      "GPU-777b14a0-4e4b-9ed3-4d9c-12c0063c0187"
+    ],
+    "commands": [
+      "validate completed B2/B3 checkpoints (and all Stage A variants)",
+      "extract train+val representations for B0/B1 then B2/B3",
+      "train independent probes on train and select on val",
+      "after probe selection, create the explicitly gated test95 CLIP cache",
+      "freeze the selected probes and extract test95 representations",
+      "evaluate test95 exactly once and write final comparison tables/figures"
+    ],
+    "test_split_used": true
+  },
+  "walltime_gate": {
+    "status": "PASS",
+    "remaining_seconds": 163426.12164473534,
+    "minimum_seconds": 43200
+  },
+  "current_stage": "COMPLETE",
+  "stage_a_validation": {
+    "status": "PASS",
+    "expected_epochs": 1,
+    "models": {
+      "B0": {
+        "status": "PASS",
+        "best_checkpoint": "/home/itaein/Personal_Research/checkpoints/stage_a/B0/best_val.pt",
+        "last_checkpoint": "/home/itaein/Personal_Research/checkpoints/stage_a/B0/last.pt",
+        "global_update": 734,
+        "completed_epoch": 1,
+        "state_dict_sha256": "d022e4b5afd790762fd2ef93fe65f0c4b7a75fbfcd9ef2d1efd8bd6eed509f71",
+        "last_state_dict_sha256": "d022e4b5afd790762fd2ef93fe65f0c4b7a75fbfcd9ef2d1efd8bd6eed509f71"
+      },
+      "B1": {
+        "status": "PASS",
+        "best_checkpoint": "/home/itaein/Personal_Research/checkpoints/stage_a/B1/best_val.pt",
+        "last_checkpoint": "/home/itaein/Personal_Research/checkpoints/stage_a/B1/last.pt",
+        "global_update": 734,
+        "completed_epoch": 1,
+        "state_dict_sha256": "8a54181ff307779428de494c578456de4bba88e11cf9489d844889faf19dbc16",
+        "last_state_dict_sha256": "8a54181ff307779428de494c578456de4bba88e11cf9489d844889faf19dbc16"
+      },
+      "B2": {
+        "status": "PASS",
+        "best_checkpoint": "/home/itaein/Personal_Research/checkpoints/stage_a/B2/best_val.pt",
+        "last_checkpoint": "/home/itaein/Personal_Research/checkpoints/stage_a/B2/last.pt",
+        "global_update": 734,
+        "completed_epoch": 1,
+        "state_dict_sha256": "27802a4b01bfa4fa82cd206e96c2396c27d32ad4554a69cbe29794ad077ed455",
+        "last_state_dict_sha256": "27802a4b01bfa4fa82cd206e96c2396c27d32ad4554a69cbe29794ad077ed455"
+      },
+      "B3": {
+        "status": "PASS",
+        "best_checkpoint": "/home/itaein/Personal_Research/checkpoints/stage_a/B3/best_val.pt",
+        "last_checkpoint": "/home/itaein/Personal_Research/checkpoints/stage_a/B3/last.pt",
+        "global_update": 734,
+        "completed_epoch": 1,
+        "state_dict_sha256": "b3c49da3ea6c71c5916ffad280be8a5ebf7fba39b8874581b83a42a9e5c5e3e8",
+        "last_state_dict_sha256": "b3c49da3ea6c71c5916ffad280be8a5ebf7fba39b8874581b83a42a9e5c5e3e8"
+      }
+    }
+  },
+  "stage_b_validation": {
+    "status": "PASS",
+    "variants": {
+      "B0": {
+        "status": "PASS",
+        "report_dir": "/home/itaein/Personal_Research/analysis/stage_b/final_test/B0",
+        "files": [
+          "FINAL_TEST_COMPLETED.json",
+          "current_retention_by_distance.csv",
+          "current_retention_by_transition.csv",
+          "figures",
+          "instantaneous_control.json",
+          "memory_depth.csv",
+          "sequence_consistency.json",
+          "summary.csv",
+          "summary.json"
+        ],
+        "figures": [
+          "current_retention.svg",
+          "dashboard.html",
+          "instantaneous_control.svg",
+          "memory_depth.svg",
+          "sequence_consistency.svg",
+          "transition_robustness.svg"
+        ]
+      },
+      "B1": {
+        "status": "PASS",
+        "report_dir": "/home/itaein/Personal_Research/analysis/stage_b/final_test/B1",
+        "files": [
+          "FINAL_TEST_COMPLETED.json",
+          "current_retention_by_distance.csv",
+          "current_retention_by_transition.csv",
+          "figures",
+          "instantaneous_control.json",
+          "memory_depth.csv",
+          "sequence_consistency.json",
+          "summary.csv",
+          "summary.json"
+        ],
+        "figures": [
+          "current_retention.svg",
+          "dashboard.html",
+          "instantaneous_control.svg",
+          "memory_depth.svg",
+          "sequence_consistency.svg",
+          "transition_robustness.svg"
+        ]
+      },
+      "B2": {
+        "status": "PASS",
+        "report_dir": "/home/itaein/Personal_Research/analysis/stage_b/final_test/B2",
+        "files": [
+          "FINAL_TEST_COMPLETED.json",
+          "current_retention_by_distance.csv",
+          "current_retention_by_transition.csv",
+          "figures",
+          "instantaneous_control.json",
+          "memory_depth.csv",
+          "sequence_consistency.json",
+          "summary.csv",
+          "summary.json"
+        ],
+        "figures": [
+          "current_retention.svg",
+          "dashboard.html",
+          "instantaneous_control.svg",
+          "memory_depth.svg",
+          "sequence_consistency.svg",
+          "transition_robustness.svg"
+        ]
+      },
+      "B3": {
+        "status": "PASS",
+        "report_dir": "/home/itaein/Personal_Research/analysis/stage_b/final_test/B3",
+        "files": [
+          "FINAL_TEST_COMPLETED.json",
+          "current_retention_by_distance.csv",
+          "current_retention_by_transition.csv",
+          "figures",
+          "instantaneous_control.json",
+          "memory_depth.csv",
+          "sequence_consistency.json",
+          "summary.csv",
+          "summary.json"
+        ],
+        "figures": [
+          "current_retention.svg",
+          "dashboard.html",
+          "instantaneous_control.svg",
+          "memory_depth.svg",
+          "sequence_consistency.svg",
+          "transition_robustness.svg"
+        ]
+      }
+    },
+    "comparison_dir": "/home/itaein/Personal_Research/analysis/stage_b/final_test/comparison"
+  },
+  "finished_at": 1787808705.6177938,
+  "runtime_seconds": 10346.471428155899
+}

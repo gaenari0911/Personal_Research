@@ -1,0 +1,101 @@
+{
+  "task": "WashFruitColander",
+  "task_source_commit": "a07e365c958c4216cd6bbd5f30b47f09a65c6f00",
+  "predicate_version": "washfruitcolander-r1.6-source-audit-v1",
+  "official_stage_count": 4,
+  "raw_annotation_phase_count": null,
+  "semantic_goal_count_from_task_metadata": 4,
+  "deterministic_research_stage_count_verdict": "NOT_VALIDATED_ON_RECORDED_EPISODES",
+  "stages": [
+    {
+      "stage_id": 0,
+      "name": "S1",
+      "natural_language_meaning": "Place the colander in a sink basin.",
+      "involved_objects": ["colander"],
+      "involved_fixture": "sink",
+      "official_source": [
+        "wash_fruit_colander.py:20-37 task language",
+        "wash_fruit_colander.py:67-81 colander configuration",
+        "sink.py:222-314 Sink.get_obj_basin_loc"
+      ],
+      "completion_predicate": "sink.get_obj_basin_loc(env, 'colander', partial_check=False) != 'none'",
+      "persistent_after_completion": false,
+      "reversible": true,
+      "simulator_state_variables_needed": [
+        "colander world pose and bounding box",
+        "sink world pose and basin region geometry"
+      ],
+      "source_backed": true,
+      "evaluated_on_small_sample": false
+    },
+    {
+      "stage_id": 1,
+      "name": "S2",
+      "natural_language_meaning": "Place every task fruit in the colander.",
+      "involved_objects": ["fruit0..fruitN", "colander"],
+      "involved_fixture": null,
+      "official_source": [
+        "wash_fruit_colander.py:86-93 full-task success",
+        "object_utils.py:587-601 OU.check_obj_in_receptacle"
+      ],
+      "completion_predicate": "all(OU.check_obj_in_receptacle(env, fruit_i, 'colander'))",
+      "persistent_after_completion": false,
+      "reversible": true,
+      "simulator_state_variables_needed": [
+        "fruit and colander world poses",
+        "fruit-colander MuJoCo contacts",
+        "colander horizontal radius"
+      ],
+      "source_backed": true,
+      "evaluated_on_small_sample": false
+    },
+    {
+      "stage_id": 2,
+      "name": "S3",
+      "natural_language_meaning": "Align the colander with the sink water site, potentially by turning the spout.",
+      "involved_objects": ["colander"],
+      "involved_fixture": "sink spout and water site",
+      "official_source": [
+        "sink.py:316-327 geometric portion of Sink.check_obj_under_water",
+        "kitchen_sink.py:122-220 atomic TurnSinkSpout task",
+        "composite_tasks_dropdown.js skill tags include knob_twist"
+      ],
+      "completion_predicate": "xy_distance(colander, water_site) < colander.horizontal_radius and colander_z < water_site_z + water_site_size[1]",
+      "persistent_after_completion": false,
+      "reversible": true,
+      "simulator_state_variables_needed": [
+        "colander world position",
+        "water-site world position",
+        "spout joint and kinematics",
+        "colander horizontal radius"
+      ],
+      "source_backed": "PARTIAL",
+      "unresolved_issue": "WashFruitColander stores no task-specific desired spout orientation and only 1/5 samples changed spout by more than 0.1 rad; a universal independent S3 completion event is not established.",
+      "evaluated_on_small_sample": false
+    },
+    {
+      "stage_id": 3,
+      "name": "S4",
+      "natural_language_meaning": "Turn on water while the fruit-filled colander is under the water stream; complete the task.",
+      "involved_objects": ["fruit0..fruitN", "colander"],
+      "involved_fixture": "sink faucet, spout, and water site",
+      "official_source": [
+        "wash_fruit_colander.py:86-93 WashFruitColander._check_success",
+        "sink.py:142-220 water_on definition",
+        "sink.py:316-327 Sink.check_obj_under_water"
+      ],
+      "completion_predicate": "all_fruits_in_colander and colander_aligned_with_water_site and water_on",
+      "persistent_after_completion": false,
+      "reversible": true,
+      "simulator_state_variables_needed": [
+        "all S2/S3 inputs",
+        "sink handle joint qpos"
+      ],
+      "source_backed": true,
+      "evaluated_on_small_sample": false
+    }
+  ],
+  "ordered_state_machine": "First valid completion of the current predicate only; no backward transition and at most one transition per frame.",
+  "evaluation_blocker": "Official P1/P2 require compiled geometry/contact. The saved XML references unavailable assets, and 16D parquet state omits objects, contacts, and fixtures.",
+  "labels_generated": false
+}

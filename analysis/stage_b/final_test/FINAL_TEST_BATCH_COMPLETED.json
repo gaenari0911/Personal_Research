@@ -1,0 +1,11 @@
+{
+  "status": "COMPLETE",
+  "variants": [
+    "B0",
+    "B1",
+    "B2",
+    "B3"
+  ],
+  "split": "test",
+  "parallel_workers": 4
+}

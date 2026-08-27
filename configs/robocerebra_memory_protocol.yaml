@@ -1,0 +1,164 @@
+protocol_version: r2-v1
+seed: 42
+
+dataset:
+  episode_index: analysis/robocerebra_memory_episode_index.json
+  train_split: splits/robocerebra_memory_train.json
+  val_split: splits/robocerebra_memory_val.json
+  test_split: splits/robocerebra_memory_test.json
+  frequency_hz: 20
+  boundary_convention: half-open
+  external_rgb_image_index_equals_timestep: true
+  exclude_extra_final_video_image: true
+
+inputs:
+  external_rgb:
+    enabled: true
+    resize: [224, 224]
+    encoder: openai_clip_vit_b32
+    frozen: true
+    output_dim: 512
+  robot_proprioception:
+    source_slice: [1, 10]
+    input_dim: 9
+    fields: panda_joint_qpos_7_plus_gripper_qpos_2
+  language:
+    encoder: openai_clip_vit_b32_text
+    frozen: true
+    output_dim: 512
+  previous_action:
+    enabled: false
+  privileged_mujoco_state:
+    enabled: false
+
+fusion:
+  d_model: 128
+  method: projected_sum_then_layer_norm
+  observation_state_only_tap: before_language_addition
+
+temporal_backbone:
+  source_contract: external/MaIL/agents/models/oc_ddpm/mamba.py::MixerModel
+  architecture: mamba_mixer_model
+  d_model: 128
+  n_layer: 16
+  d_state: 16
+  d_conv: 4
+  expand: 2
+  final_norm: layer_norm
+  primary_probe_point: norm_f_output_at_current_observation_token_before_future_head
+  primary_representation_shape: [batch, time, 128]
+  internal_ssm_cache_probe: secondary_only
+  reset: episode_start_only
+  training_chunk_length: 256
+  detach_carried_cache_between_training_chunks: true
+
+representation_learning:
+  name: language_conditioned_causal_future_visual_contrast
+  behavior_cloning: false
+  action_target: false
+  primary_horizon_frames: 20
+  primary_horizon_seconds: 1.0
+  target: frozen_clip_external_rgb_embedding_at_t_plus_20
+  loss: in_batch_info_nce
+  temperature: 0.07
+  auxiliary_horizon: null
+  target_frames_must_remain_in_same_trajectory: true
+
+models:
+  B0:
+    name: Fixed-Window FULL
+    context_window: 5
+    persistent_state: false
+    conditioning: FULL
+  B1:
+    name: Persistent FULL
+    context_window: episode
+    persistent_state: true
+    conditioning: FULL
+  B2:
+    name: Persistent CURRENT
+    context_window: episode
+    persistent_state: true
+    conditioning: CURRENT
+    interpretation: oracle_current_conditioning_upper_bound
+  B3:
+    name: Persistent HOLD/Transition
+    context_window: episode
+    persistent_state: true
+    conditioning: HOLD
+    primary_research_condition: true
+  B4_optional:
+    name: Persistent NO-LANGUAGE
+    enabled_in_primary_table: false
+    role: secondary_language_ablation_if_compute_budget_allows
+  instantaneous_control:
+    temporal_history: false
+    language: false
+    representation: pre_language_observation_state_fusion_at_t
+
+fairness:
+  shared:
+    - visual_encoder
+    - state_encoder
+    - text_encoder
+    - fusion_width
+    - mamba_width_and_depth
+    - future_prediction_objective
+    - optimizer
+    - train_trajectory_ids_and_anchor_frames
+    - training_steps
+    - probe_protocol
+  only_differences:
+    - temporal_persistence
+    - language_conditioning_strategy
+
+probe:
+  backbone_frozen: true
+  type: bias_free_linear_projection
+  fit_scope: one_independent_probe_per_model_and_target_depth
+  shared_training_sample_ids_across_models: true
+  input_dim: 128
+  output_dim: 512
+  candidate_set: ordered_step_texts_within_trajectory
+  candidate_encoder: same_frozen_clip_text_encoder_as_conditioning
+  duplicate_text_policy: identical_normalized_text_indices_form_one_positive_equivalence_class
+  training_loss: trajectory_local_multi_positive_softmax_cross_entropy
+  primary_depths: [0, 1, 2, 3]
+  retained_metadata_depths: [1, 2, 3, 4, 5]
+  metrics: [recall_at_1, mrr]
+
+sampling:
+  unit: trajectory_x_step_x_distance_bin
+  cap_per_unit: 4
+  selector: deterministic_evenly_spaced_inclusive_grid
+  distance_bins:
+    - [0, 5]
+    - [5, 20]
+    - [20, 50]
+    - [50, 100]
+    - [100, 200]
+    - [200, 400]
+    - [400, null]
+  transition_bins: [0, 1, 2, 3, 4, 5, 6, 7, 8+]
+  bin_change_after_results: forbidden
+
+evaluation:
+  point_estimate: trajectory_macro_after_step_and_bin_balancing
+  confidence_interval: trajectory_bootstrap
+  bootstrap_resamples: 2000
+  bootstrap_confidence: 0.95
+  bootstrap_seed: 42
+  final_test_once_after_val_selection: true
+
+split_contract:
+  backbone_training: train_only
+  probe_training: train_representations_only
+  hyperparameter_selection: val_only
+  final_reporting: test_only
+  test_text_and_boundaries: evaluation_target_construction_only
+
+optimizer_contract_for_r3:
+  name: AdamW
+  learning_rate: 0.0001
+  weight_decay: 0.01
+  same_updates_for_B0_to_B3: true

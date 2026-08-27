@@ -1,0 +1,15 @@
+{
+  "schema_version": "stage-a-v1",
+  "gpu_name": "NVIDIA GeForce RTX 3090|NVIDIA GeForce RTX 3090",
+  "gpu_names": [
+    "NVIDIA GeForce RTX 3090",
+    "NVIDIA GeForce RTX 3090"
+  ],
+  "gpu_memory_mib": 24124,
+  "visible_gpu_count": 2,
+  "expected_gpu_count": 2,
+  "cuda_available": true,
+  "torch_cuda_version": "12.4",
+  "pbs_job_id": "100163.pleiades1",
+  "execution_host": "pleiades1"
+}

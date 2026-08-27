@@ -1,0 +1,70 @@
+pilot_version: r4-v1
+seed: 42
+
+dataset:
+  episode_index: analysis/robocerebra_memory_episode_index.json
+  parent_train_split: splits/robocerebra_memory_train.json
+  parent_val_split: splits/robocerebra_memory_val.json
+  forbidden_test_split: splits/robocerebra_memory_test.json
+  pilot_train_split: splits/robocerebra_r4_pilot_train.json
+  pilot_val_split: splits/robocerebra_r4_pilot_val.json
+  train_trajectories: 16
+  val_trajectories: 4
+  train_scene_quotas: {coffee_table: 8, kitchen_table: 4, study_table: 4}
+  val_scene_quotas: {coffee_table: 2, kitchen_table: 1, study_table: 1}
+
+features:
+  encoder: openai/clip-vit-base-patch32
+  frozen: true
+  cache_root: /ssd1/itaein/datasets/RoboCerebra/r4_clip_cache
+  model_cache: /ssd1/itaein/datasets/RoboCerebra/model_cache/r4_clip
+  dtype: float16
+  normalized: true
+  image_batch_size: 64
+  image_t_equals_timestep: true
+  exclude_extra_final_image: true
+  scope: pilot_20_trajectories_only
+
+model:
+  variants: [B0, B1, B2, B3]
+  common_config: configs/robocerebra_memory_models.yaml
+  temporal_backend: torch_reference_mamba1_selective_scan
+  execution_mode: full_sequence_for_B1_B2_B3
+  B0_window: 5
+  automatic_state_detach: false
+
+objective:
+  name: future_visual_InfoNCE
+  horizon_frames: 20
+  temperature: 0.07
+  anchors_per_update: 64
+  anchors_per_validation_episode: 64
+  same_anchor_ids_across_models: true
+
+optimizer:
+  name: AdamW
+  learning_rate: 0.0001
+  weight_decay: 0.01
+  gradient_clip_norm: 1.0
+  updates: 16
+  schedule: constant
+
+probe:
+  targets: [current, previous_1]
+  train_steps: 100
+  learning_rate: 0.001
+  weight_decay: 0.0
+  test_split_allowed: false
+
+collapse:
+  minimum_mean_per_dimension_std: 0.001
+  minimum_pairwise_cosine_std: 0.001
+
+execution:
+  require_cuda_for_training: true
+  gpu_count_per_job: 1
+  first_job: feature_cache_then_B0_B1_smoke
+  full_pilot_only_after_smoke: true
+  checkpoints: checkpoints/r4
+  logs: logs/r4
+  final_test_evaluation: false
